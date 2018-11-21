@@ -1,3 +1,3 @@
 # triheart
 
-https://edads.github.io/triheart/
+https://ttrpg.github.io/triheart/
