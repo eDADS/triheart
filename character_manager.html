@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="character_manager_css.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="rulebook_js.js"></script>
+    <script src="character_manager_js.js"></script>
+
+    <title>eDADS Character Sheet</title>
+</head>
+
+<body>
+    <div id="headerContainer">
+        <div id="shortTitle">CS</div>
+        <div id="title">Character Sheet</div>
+        <div id="headerSpacer"></div>
+        <div id="darkmodeButton" class="headerButton">
+            <div id="darkmodeButtonText">Dark</div>
+        </div>
+        <a href="index.html">
+            <div id="portalButton" class="headerButton">
+                <div id="portalButtonText">Portal</div>
+            </div>
+        </a>
+    </div>
+
+
+    <div id="pageContainer">
+
+        <div id="characterSheet">
+
+            <div id="topbar">
+                <div id="characterNameWrapper">
+                    <div id="characterName">
+                        <div id="characterNameLabel">CHARACTER NAME</div>
+                        <input type="text" class="tbtextBox" id="name">
+                    </div>
+                </div>
+
+
+                <div id="characterLevelWrapper">
+                    <div id="characterLevel">
+                        <div id="characterLevelLabel">LEVEL</div>
+                        <input type="text" class="tbtextBox" id="level">
+                    </div>
+                </div>
+
+                <div id="characterClassWrapper">
+                    <div id="characterClass">
+                        <div id="characterClassLabel">CLASS</div>
+                        <input type="text" class="tbtextBox" id="className">
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="sheetbodyWrapper">
+                <div id="sheetbody">
+                    <div id="attributeThirdWrapper">
+                        <div id="attributeThird">
+
+                            <div class="attributeWrapper">
+                                <div class="attribute">
+                                    <div class="attributeCornerTLI cornerI"></div>
+                                    <div class="attributeCornerTLO cornerO"></div>
+                                    <div class="attributeCornerTRI cornerI"></div>
+                                    <div class="attributeCornerTRO cornerO"></div>
+                                    <div class="attributeCornerBLI cornerI"></div>
+                                    <div class="attributeCornerBLO cornerO"></div>
+                                    <div class="attributeCornerBRI cornerI"></div>
+                                    <div class="attributeCornerBRO cornerO"></div>
+                                    <div class="scoreLegendShort">STR</div>
+                                    <div class="scoreLegend">STRENGTH</div>
+                                    <div class="score">
+                                        <div contenteditable="true" id="strength"></div>
+                                    </div>
+                                </div>
+                                <div class="skills">
+                                    <div class="skill">
+                                        <div class="skillBalls">
+                                            <div id="athletics1" class="skillBall"></div>
+                                            <div id="athletics2" class="skillBall"></div>
+                                            <div id="athletics3" class="skillBall"></div>
+                                        </div>
+                                        <div class="skillname">ATHLETICS</div>
+                                    </div>
+                                    <div class="skill">
+                                        <div class="skillBalls">
+                                            <div id="climb1" class="skillBall"></div>
+                                            <div id="climb2" class="skillBall"></div>
+                                            <div id="climb3" class="skillBall"></div>
+                                        </div>
+                                        <div class="skillname">CLIMB</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="attributeWrapper">
+                                <div class="attribute">
+                                    <div class="attributeCornerTLI cornerI"></div>
+                                    <div class="attributeCornerTLO cornerO"></div>
+                                    <div class="attributeCornerTRI cornerI"></div>
+                                    <div class="attributeCornerTRO cornerO"></div>
+                                    <div class="attributeCornerBLI cornerI"></div>
+                                    <div class="attributeCornerBLO cornerO"></div>
+                                    <div class="attributeCornerBRI cornerI"></div>
+                                    <div class="attributeCornerBRO cornerO"></div>
+                                    <div class="scoreLegendShort">AGI</div>
+                                    <div class="scoreLegend">AGILITY</div>
+                                    <div class="score">
+                                        <div contenteditable="true" id="agility"></div>
+                                    </div>
+                                </div>
+                                <div class="skills">
+                                    <div class="skill">
+                                        <div class="skillBalls">
+                                            <div id="acrobatics1" class="skillBall"></div>
+                                            <div id="acrobatics2" class="skillBall"></div>
+                                            <div id="acrobatics3" class="skillBall"></div>
+                                        </div>
+                                        <div class="skillname">ACROBATICS</div>
+                                    </div>
+                                    <div class="skill">
+                                        <div class="skillBalls">
+                                            <div id="dexterity1" class="skillBall"></div>
+                                            <div id="dexterity2" class="skillBall"></div>
+                                            <div id="dexterity3" class="skillBall"></div>
+                                        </div>
+                                        <div class="skillname">DEXTERITY</div>
+                                    </div>
+                                    <div class="skill">
+                                        <div class="skillBalls">
+                                            <div id="stealth1" class="skillBall"></div>
+                                            <div id="stealth2" class="skillBall"></div>
+                                            <div id="stealth3" class="skillBall"></div>
+                                        </div>
+                                        <div class="skillname">STEALTH</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="attributeWrapper">
+                                <div class="attribute">
+                                    <div class="attributeCornerTLI cornerI"></div>
+                                    <div class="attributeCornerTLO cornerO"></div>
+                                    <div class="attributeCornerTRI cornerI"></div>
+                                    <div class="attributeCornerTRO cornerO"></div>
+                                    <div class="attributeCornerBLI cornerI"></div>
+                                    <div class="attributeCornerBLO cornerO"></div>
+                                    <div class="attributeCornerBRI cornerI"></div>
+                                    <div class="attributeCornerBRO cornerO"></div>
+                                    <div class="scoreLegendShort">VIT</div>
+                                    <div class="scoreLegend">VITALITY</div>
+                                    <div class="score">
+                                        <div contenteditable="true" id="vitality"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="attributeWrapper">
+
+                                <div class="attribute">
+                                    <div class="attributeCornerTLI cornerI"></div>
+                                    <div class="attributeCornerTLO cornerO"></div>
+                                    <div class="attributeCornerTRI cornerI"></div>
+                                    <div class="attributeCornerTRO cornerO"></div>
+                                    <div class="attributeCornerBLI cornerI"></div>
+                                    <div class="attributeCornerBLO cornerO"></div>
+                                    <div class="attributeCornerBRI cornerI"></div>
+                                    <div class="attributeCornerBRO cornerO"></div>
+                                    <div class="scoreLegendShort">KNO</div>
+                                    <div class="scoreLegend">KNOWLEDGE</div>
+                                    <div class="score">
+                                        <div contenteditable="true" id="knowledge"></div>
+                                    </div>
+                                </div>
+                                <div class="skills">
+                                    <div class="skill">
+                                        <div class="skillBalls">
+                                            <div id="medicine1" class="skillBall"></div>
+                                            <div id="medicine2" class="skillBall"></div>
+                                            <div id="medicine3" class="skillBall"></div>
+                                        </div>
+                                        <div class="skillname">MEDICINE</div>
+                                    </div>
+                                    <div class="skill">
+                                        <div class="skillBalls">
+                                            <div id="alchemy1" class="skillBall"></div>
+                                            <div id="alchemy2" class="skillBall"></div>
+                                            <div id="alchemy3" class="skillBall"></div>
+                                        </div>
+                                        <div class="skillname">ALCHEMY</div>
+                                    </div>
+                                    <div class="skill">
+                                        <div class="skillBalls">
+                                            <div id="occult1" class="skillBall"></div>
+                                            <div id="occult2" class="skillBall"></div>
+                                            <div id="occult3" class="skillBall"></div>
+                                        </div>
+                                        <div class="skillname">OCCULT</div>
+                                    </div>
+                                    <div class="skill">
+                                        <div class="skillBalls">
+                                            <div id="nature1" class="skillBall"></div>
+                                            <div id="nature2" class="skillBall"></div>
+                                            <div id="nature3" class="skillBall"></div>
+                                        </div>
+                                        <div class="skillname">NATURE</div>
+                                    </div>
+                                    <div class="skill">
+                                        <div class="skillBalls">
+                                            <div id="forgery1" class="skillBall"></div>
+                                            <div id="forgery2" class="skillBall"></div>
+                                            <div id="forgery3" class="skillBall"></div>
+                                        </div>
+                                        <div class="skillname">FORGERY</div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="attributeWrapper">
+                                <div class="attribute">
+                                    <div class="attributeCornerTLI cornerI"></div>
+                                    <div class="attributeCornerTLO cornerO"></div>
+                                    <div class="attributeCornerTRI cornerI"></div>
+                                    <div class="attributeCornerTRO cornerO"></div>
+                                    <div class="attributeCornerBLI cornerI"></div>
+                                    <div class="attributeCornerBLO cornerO"></div>
+                                    <div class="attributeCornerBRI cornerI"></div>
+                                    <div class="attributeCornerBRO cornerO"></div>
+                                    <div class="scoreLegendShort">INS</div>
+                                    <div class="scoreLegend">INSTINCT</div>
+                                    <div class="score">
+                                        <div contenteditable="true" id="instinct"></div>
+                                    </div>
+                                </div>
+                                <div class="skills">
+                                    <div class="skill">
+                                        <div class="skillBalls">
+                                            <div id="perception1" class="skillBall"></div>
+                                            <div id="perception2" class="skillBall"></div>
+                                            <div id="perception3" class="skillBall"></div>
+                                        </div>
+                                        <div class="skillname">PERCEPTION</div>
+                                    </div>
+                                    <div class="skill">
+                                        <div class="skillBalls">
+                                            <div id="investigation1" class="skillBall"></div>
+                                            <div id="investigation2" class="skillBall"></div>
+                                            <div id="investigation3" class="skillBall"></div>
+                                        </div>
+                                        <div class="skillname">INVESTIGATION</div>
+                                    </div>
+                                    <div class="skill">
+                                        <div class="skillBalls">
+                                            <div id="hunting1" class="skillBall"></div>
+                                            <div id="hunting2" class="skillBall"></div>
+                                            <div id="hunting3" class="skillBall"></div>
+                                        </div>
+                                        <div class="skillname">HUNTING</div>
+                                    </div>
+                                    <div class="skill">
+                                        <div class="skillBalls">
+                                            <div id="animalhandling1" class="skillBall"></div>
+                                            <div id="animalhandling2" class="skillBall"></div>
+                                            <div id="animalhandling3" class="skillBall"></div>
+                                        </div>
+                                        <div class="skillname">ANIMAL HANDLING</div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="attributeWrapper">
+                                <div class="attribute">
+                                    <div class="attributeCornerTLI cornerI"></div>
+                                    <div class="attributeCornerTLO cornerO"></div>
+                                    <div class="attributeCornerTRI cornerI"></div>
+                                    <div class="attributeCornerTRO cornerO"></div>
+                                    <div class="attributeCornerBLI cornerI"></div>
+                                    <div class="attributeCornerBLO cornerO"></div>
+                                    <div class="attributeCornerBRI cornerI"></div>
+                                    <div class="attributeCornerBRO cornerO"></div>
+                                    <div class="scoreLegendShort">CHA</div>
+                                    <div class="scoreLegend">CHARISMA</div>
+                                    <div class="score">
+                                        <div contenteditable="true" id="charisma"></div>
+                                    </div>
+                                </div>
+                                <div class="skills">
+                                    <div class="skill">
+                                        <div class="skillBalls">
+                                            <div id="persuasion1" class="skillBall"></div>
+                                            <div id="persuasion2" class="skillBall"></div>
+                                            <div id="persuasion3" class="skillBall"></div>
+                                        </div>
+                                        <div class="skillname">PERSUASION</div>
+                                    </div>
+                                    <div class="skill">
+                                        <div class="skillBalls">
+                                            <div id="deception1" class="skillBall"></div>
+                                            <div id="deception2" class="skillBall"></div>
+                                            <div id="deception3" class="skillBall"></div>
+                                        </div>
+                                        <div class="skillname">DECEPTION</div>
+                                    </div>
+                                    <div class="skill">
+                                        <div class="skillBalls">
+                                            <div id="intimidation1" class="skillBall"></div>
+                                            <div id="intimidation2" class="skillBall"></div>
+                                            <div id="intimidation3" class="skillBall"></div>
+                                        </div>
+                                        <div class="skillname">INTIMIDATION</div>
+                                    </div>
+                                    <div class="skill">
+                                        <div class="skillBalls">
+                                            <div id="entertainment1" class="skillBall"></div>
+                                            <div id="entertainment2" class="skillBall"></div>
+                                            <div id="entertainment3" class="skillBall"></div>
+                                        </div>
+                                        <div class="skillname">ENTERTAINMENT</div>
+                                    </div>
+                                    <div class="skill">
+                                        <div class="skillBalls">
+                                            <div id="streetwise1" class="skillBall"></div>
+                                            <div id="streetwise2" class="skillBall"></div>
+                                            <div id="streetwise3" class="skillBall"></div>
+                                        </div>
+                                        <div class="skillname">STREETWISE</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="resourcesThirdWrapper">
+                        <div id="resourcesThird">
+
+                            <div id="mobileResourcesWrapper">
+                                <div id="mobileResources">
+                                    <div class="mobileResourceWrapper">
+                                        <div class="mobileMaxResource">
+                                            <div class="mobileMaxResourceLegend">MAX HEALTH</div>
+                                            <div contenteditable="true" id="maxHealth"></div>
+                                        </div>
+                                        <div class="mobileResource">
+                                            <div contenteditable="true" id="health"></div>
+                                        </div>
+                                        <div class="mobileResourceLegend">CURRENT HEALTH</div>
+                                    </div>
+
+                                    <div class="mobileResourceWrapper">
+                                        <div class="mobileMaxResource">
+                                            <div class="mobileMaxResourceLegend">MAX MANA</div>
+                                            <div contenteditable="true" id="maxMana"></div>
+                                        </div>
+                                        <div class="mobileResource">
+                                            <div contenteditable="true" id="mana"></div>
+                                        </div>
+                                        <div class="mobileResourceLegend">CURRENT MANA</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="inventoryWrapper">
+                                <div id="inventoryLegend">INVENTORY</div>
+                                <div class="inventoryTriangle"></div>
+                                <p contenteditable="true" id="inventory1" class="inventory"></p>
+                                <div class="inventoryTriangle"></div>
+                                <p contenteditable="true" id="inventory2" class="inventory"></p>
+                                <div class="inventoryTriangle"></div>
+                                <p contenteditable="true" id="inventory3" class="inventory"></p>
+                                <div class="inventoryTriangle"></div>
+                                <p contenteditable="true" id="inventory4" class="inventory"></p>
+                                <div class="inventoryTriangle"></div>
+                                <p contenteditable="true" id="inventory5" class="inventory"></p>
+                                <div class="inventoryTriangle"></div>
+                                <p contenteditable="true" id="inventory6" class="inventory"></p>
+                                <div class="inventoryTriangle"></div>
+                                <p contenteditable="true" id="inventory7" class="inventory"></p>
+                                <div class="inventoryTriangle"></div>
+                                <p contenteditable="true" id="inventory8" class="inventory"></p>
+                                <div class="inventoryTriangle"></div>
+                                <p contenteditable="true" id="inventory9" class="inventory"></p>
+                                <div class="inventoryTriangle"></div>
+                                <p contenteditable="true" id="inventory10" class="inventory"></p>
+                                <div id="wealthLegend">WEALTH:</div>
+                                <p contenteditable="true" id="wealth"></p>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div id="rpThirdWrapper">
+                        <div id="rpThird">
+                            <div id="determinationContainer">
+                                <div id="determinationBox">
+                                    <div class="attributeCornerTLI cornerI"></div>
+                                    <div class="attributeCornerTLO cornerO"></div>
+                                    <div class="attributeCornerTRI cornerI"></div>
+                                    <div class="attributeCornerTRO cornerO"></div>
+                                    <div class="attributeCornerBLI cornerI"></div>
+                                    <div class="attributeCornerBLO cornerO"></div>
+                                    <div class="attributeCornerBRI cornerI"></div>
+                                    <div class="attributeCornerBRO cornerO"></div>
+                                    <div contenteditable="true" id="determination"></div>
+                                </div>
+                                <div id="determinationLegend">DETERMINATION</div>
+                            </div>
+
+                            <div class="rpBox">
+                                <div class="rpLegend">PERSONAL VALUES</div>
+                                <p contenteditable="true" id="personalValue1"></p>
+                                <p contenteditable="true" id="personalValue2"></p>
+                                <p contenteditable="true" id="personalValue3"></p>
+                                <p contenteditable="true" id="personalValue4"></p>
+                                <p contenteditable="true" id="personalValue5"></p>
+                                <p contenteditable="true" id="personalValue6"></p>
+                            </div>
+
+                            <div class="rpBox">
+                                <div class="rpLegend">UNIVERSAL VALUES</div>
+                                <p contenteditable="true" id="universalValue1"></p>
+                                <p contenteditable="true" id="universalValue2"></p>
+                                <p contenteditable="true" id="universalValue3"></p>
+                                <p contenteditable="true" id="universalValue4"></p>
+                                <p contenteditable="true" id="universalValue5"></p>
+                                <p contenteditable="true" id="universalValue6"></p>
+                            </div>
+
+                            <div class="rpBox">
+                                <div class="rpLegend">CHARACTERISTICS</div>
+                                <p contenteditable="true" id="characteristic1"></p>
+                                <p contenteditable="true" id="characteristic2"></p>
+                                <p contenteditable="true" id="characteristic3"></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div id="sheetnotesWrapper">
+                <div id="sheetnotes">
+                    <p contenteditable="true" id="notes">Notes:<br><br><br><br><br><br><br><br><br><br>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="abilities">
+
+        </div>
+    </div>
+
+
+    <div id="cookieCotnainer">
+        <div id="cookieText">
+            This site uses cookies to store entered information.
+        </div>
+        <div id="cookieButton">
+            ACCEPT
+        </div>
+    </div>
+</body>
+
+</html>

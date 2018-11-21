@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="dice_roller_css.css">
+    <script src="jquery.js"></script>
+    <script src="jqueryUI.js"></script>
+    <script src="rulebook_js.js"></script>
+    <script src="dice_roller_js.js"></script>
+
+    <title>Dice Roller</title>
+</head>
+
+<body>
+    <div id="headerContainer">
+        <div id="shortTitle">Dice Roller</div>
+        <div id="title">Dice Roller</div>
+        <div id="headerSpacer"></div>
+        <div id="darkmodeButton" class="headerButton">
+            <div id="darkmodeButtonText">Dark</div>
+        </div>
+        <a href="index.html">
+            <div id="portalButton" class="headerButton">
+                <div id="portalButtonText">Portal</div>
+            </div>
+        </a>
+    </div>
+    <div id="pageContainer">
+
+        <div id="roller">
+            <div id="legend">
+                <p>
+                    Click a die to roll
+                </p>
+            </div>
+            <div id="d4" class="die">
+                <div class="roll" id="rolld4">
+                    <img src="dice_roller_images/d4L.svg" class="dieImage lightmodeImage" height="100" width="100">
+                    <img src="dice_roller_images/d4D.svg" class="dieImage darkmodeImage hidden-content" height="100"
+                        width="100">
+                    <div id="d4history" class="rollHistory"></div>
+                </div>
+            </div>
+            <div id="d6" class="die">
+                <div class="roll" id="rolld6">
+                    <img src="dice_roller_images/d6L.svg" class="dieImage lightmodeImage" height="100" width="100">
+                    <img src="dice_roller_images/d6D.svg" class="dieImage darkmodeImage hidden-content" height="100"
+                        width="100">
+                    <div id="d6history" class="rollHistory"></div>
+                </div>
+            </div>
+            <div id="d8" class="die">
+                <div class="roll" id="rolld8">
+                    <img src="dice_roller_images/d8L.svg" class="dieImage lightmodeImage" height="100" width="100">
+                    <img src="dice_roller_images/d8D.svg" class="dieImage darkmodeImage hidden-content" height="100"
+                        width="100">
+                    <div id="d8history" class="rollHistory"></div>
+                </div>
+            </div>
+            <div id="d10" class="die">
+                <div class="roll" id="rolld10">
+                    <img src="dice_roller_images/d10L.svg" class="dieImage lightmodeImage" height="100" width="100">
+                    <img src="dice_roller_images/d10D.svg" class="dieImage darkmodeImage hidden-content" height="100"
+                        width="100">
+                    <div id="d10history" class="rollHistory"></div>
+                </div>
+            </div>
+            <div id="d12" class="die">
+                <div class="roll" id="rolld12">
+                    <img src="dice_roller_images/d12L.svg" class="dieImage lightmodeImage" height="100" width="100">
+                    <img src="dice_roller_images/d12D.svg" class="dieImage darkmodeImage hidden-content" height="100"
+                        width="100">
+                    <div id="d12history" class="rollHistory"></div>
+                </div>
+            </div>
+            <div id="d20" class="die">
+                <div class="roll" id="rolld20">
+                    <img src="dice_roller_images/d20L.svg" class="dieImage lightmodeImage" height="100" width="100">
+                    <img src="dice_roller_images/d20D.svg" class="dieImage darkmodeImage hidden-content" height="100"
+                        width="100">
+                    <div id="d20history" class="rollHistory"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="cookieCotnainer">
+        <div id="cookieText">
+            This site uses cookies to store entered information.
+        </div>
+        <div id="cookieButton">
+            ACCEPT
+        </div>
+    </div>
+</body>
+
+</html>

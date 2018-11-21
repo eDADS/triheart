@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="rulebook_css.css">
+
+    <script src="jquery.js"></script>
+    <script src="jqueryUI.js"></script>
+    <script src="rulebook_js.js"></script>
+
+    <title>eDADS Core</title>
+</head>
+
+<body>
+    <div id="headerContainer">
+        <div id="burgerContainer">
+            <div class="bun"></div>
+            <div class="bun"></div>
+            <div class="bun"></div>
+        </div>
+        <div id="shortTitle">Core</div>
+        <div id="title">Triheart Core</div>
+        <div id="headerSpacer"></div>
+        <div id="darkmodeButton" class="headerButton">
+            <div id="darkmodeButtonText">Dark</div>
+        </div>
+        <a href="index.html">
+            <div id="portalButton" class="headerButton">
+                <div id="portalButtonText">Portal</div>
+            </div>
+        </a>
+    </div>
+
+    <div id="navigationWrapper">
+        <div id="navigation">
+            <div id="accordion">
+                <h3 class="nav1">Basic Rules</h3>
+                <div class="nav2 accordion">
+                    <p class="nav3">
+                        <a href="#Introduction">Introduction</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Player Roles">Player Roles</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Dice">Dice</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Characters">Characters</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Attributes">Attributes</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Skills">Skills</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Checks">Checks</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Health">Health</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Player Death">Player Death</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Mana">Mana</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Inventory">Inventory</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Resting">Resting</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Sleeping">Sleeping</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Values">Values</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Soul, Goals & Essence">Soul, Goals & Essence</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Characteristics">Characteristics</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Distance">Distance</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Range">Range</a>
+                    </p>
+                </div>
+
+                <h3 class="nav1">Abilities</h3>
+                <div class="nav2 accordion">
+                    <p class="nav3">
+                        <a href="#Abilities">Abilities</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Class Features">Class Features</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Manoeuvres">Manoeuvres</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Spells">Spells</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Appeals">Appeals</a>
+                    </p>
+                </div>
+
+                <h3 class="nav1">Challenges</h3>
+                <div class="nav2 accordion">
+                    <p class="nav3">
+                        <a href="#Challenges">Challenges</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Gauntlets">Gauntlets</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Chases">Chases</a>
+                    </p>
+                </div>
+
+                <h3 class="nav1">Combat</h3>
+                <div class="nav2 accordion">
+                    <p class="nav3">
+                        <a href="#The Basics of Combat">The Basics of Combat</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Types of Combat">Types of Combat</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Range">Range</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Direction">Direction</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Movement">Movement</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Attacks">Attacks</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Basic Attacks">Basic Attacks</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Attacks of Opportunity">Attacks of Opportunity</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Shifting">Shifting</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Defence">Defence</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Being Prone">Being Prone</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Difficult Terrain">Difficult Terrain</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Cover">Cover</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Actions">Actions</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Bonus Actions">Bonus Actions</a>
+                    </p>
+                    <p class="nav3">
+                        <a href="#Delayed Turns">Delayed Turns</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="pageContainer">
+        <div class="gutter" id="leftGutter"></div>
+        <div id="contentContainer">
+
+            <div class="chapter">
+                <h1>
+                    <span>Basic Rules</span>
+                </h1>
+                <div class="contentBlockWrapper">
+                    <div class="contentBlock">
+
+
+
+                        <h2>Introduction</h2>
+                        <a id="Introduction" class="anchor"></a>
+                        <div class="contentBlockWrapper">
+                            <div class="contentBlock">
+                                <p><strong>Triheart</strong> is a tabletop role-playing game played with pencils,
+                                    paper, and dice, with friends or acquaintances around a table. Triheart allows the
+                                    players to tell stories of the adventures of heroes in a fantasy setting.</p>
+
+                                <img src="rulebook_images/dice.svg" class="blockImage lightmodeImage" height="300"
+                                    width="300">
+                                <img src="rulebook_images/diceDarkmode.svg" class="blockImage darkmodeImage hidden-content"
+                                    height="300" width="300">
+                                <h3>The Players</h3>
+                                <p>Players each play one character within the fantasy world of Triheart. They work
+                                    together
+                                    with other players to succeed in challenges they face to achieve great things. The
+                                    main
+                                    concern of the players is to be part of a fun and exciting experience for everyone
+                                    concerned. How well a player does is not measured in the wealth they acquire or
+                                    power they
+                                    wield in the game, but in how memorable the characters they play are, and how much
+                                    they
+                                    contribute to the enjoyment of the game.</p>
+                                <h3>The Game Master</h3>
+                                <p>The <strong>game master</strong>, or <strong>GM</strong> for short, is played by
+                                    just one
+                                    player. The game master is in charge of running everything about the world other
+                                    than the
+                                    characters the players are playing. The GM is in charge of describing the world and
+                                    playing
+                                    all characters nor being played by other players. The GM is the storyteller and
+                                    also the
+                                    final arbitrator of rules presented in this document if there is disagreement among
+                                    the
+                                    players. The GM&rsquo;s job is still for everyone to have fun, and a good GM will
+                                    not only
+                                    go by the book but is willing to go with what the table thinks if that will result
+                                    in
+                                    everyone having a good time.</p>
+
+                                <h3>Dice</h3>
+                                <p>The game uses standard polyhedral dice, available from all good gaming stores and
+                                    online. The dice are referred to as d4, d6, d8, d10, d12, and d20 after how many
+                                    sides each kind of die has.</p>
+                                <p>A d10 you have might have numbers from 0 to 9, rather than 1 to 10. With these dice
+                                    the 0 is read as a 10 instead.</p>
+                            </div>
+                        </div>
+
+                        <h2>Characters</h2>
+                        <a id="Characters" class="anchor"></a>
+                        <div class="contentBlockWrapper">
+                            <div class="contentBlock">
+                                <p>A <strong>character</strong> in Triheart is any being who has agency. This means all
+                                    humanoids, animals, and other beings who are capable of making meaningful
+                                    decisions regarding the story, no matter how small the being.</p>
+
+                            </div>
+                        </div>
+
+                        <h2>Attributes</h2>
+                        <a id="Attributes" class="anchor"></a>
+                        <div class="contentBlockWrapper">
+                            <div class="contentBlock">
+                                <p>Every character has a number of <strong>attributes</strong>, that represent various
+                                    capabilities of their person. Attributes are represented as number values where
+                                    &plusmn;0 is the average person. Generally, people vary from -5 to +5, but values
+                                    lower and higher are possible under the right circumstances.</p>
+                                <p>Here are the 6 attributes in Triheart:</p>
+                                <p><em>Strength</em></p>
+                                <p>Sheer physical strength. A character&rsquo;s ability to use melee weapons, jumping,
+                                    climbing, moving heavy objects, and other feats of athleticism.</p>
+                                <p><em>Agility</em></p>
+                                <p>Nimbleness, reflexes, and accuracy. A character&rsquo;s ability to use ranged
+                                    weaponry such as bows, perform acrobatics, sneak around, and dodge incoming
+                                    attacks.</p>
+                                <p><em>Vitality</em></p>
+                                <p>A character&rsquo;s ability to withstand injury, poisons, and illness. Determines a
+                                    character&rsquo;s health.</p>
+                                <p><em>Knowledge</em></p>
+                                <p>Memory and knowledge. A character&rsquo;s ability to memorise, recall, and the
+                                    breadth and depth of their general knowledge.</p>
+                                <p><em>Instinct</em></p>
+                                <p>Mind and perception. A character&rsquo;s ability to hear the feintest of sounds,
+                                    notice the smallest facial expressions, ability to make split second decisions, and
+                                    the willpower to stay clam under pressure.</p>
+                                <p><em>Charisma</em></p>
+                                <p>Social skills and communication. A character&rsquo;s ability to make themselves be
+                                    understood, to impress, and to make others believe.</p>
+                                <p>Note that a character&rsquo;s charisma has nothing to do with how they look, but
+                                    with the force of their character in social situations.</p>
+
+                            </div>
+                        </div>
+
+
+                        <h2>Skills</h2>
+                        <a id="Skills" class="anchor"></a>
+                        <div class="contentBlockWrapper">
+                            <div class="contentBlock">
+                                    <img src="rulebook_images/trap.svg" class="blockImage lightmodeImage" height="300" width="300">
+                                    <img src="rulebook_images/trapDarkmode.svg" class="blockImage darkmodeImage hidden-content"
+                                        height="300" width="300">
+                                <p>Each attribute has associated with it a wide variety of <strong>skills</strong>. A
+                                    skill is a more specific application of an attribute that can be trained. A
+                                    character can have 0&ndash;3 levels in in a particular skill, from not trained at
+                                    all to expertise. Here follow all of the skills and which attribute they are
+                                    associated with.</p>
+                                <p><em>Strength</em></p>
+                                <ul>
+                                    <li>Athletics &mdash; How much you can lift, push, pull, and perform other such
+                                        feats of athleticism</li>
+                                    <li>Climb &mdash; How difficult a surface you can climb and how fast</li>
+                                </ul>
+                                <p><em>Agility</em></p>
+                                <ul>
+                                    <li>Acrobatics &mdash; How well you can balance on a tightrope, a slippery surface,
+                                        catch hold of ledges, and perform flips and other acrobatic moves</li>
+                                    <li>Dexterity &mdash; Lockpicking, disarming traps, pickpocketing, everything that
+                                        requires a great amount of fine motor skills.</li>
+                                    <li>Stealth &mdash; How quietly and sneakily you can move</li>
+                                </ul>
+                                <p><em>Vitality</em><em> &ndash; Vitality has no skills associated with it</em></p>
+                                <p><em>Knowledge</em></p>
+                                <ul>
+                                    <li>Medicine &mdash; How much you know about anatomy and performing first aid</li>
+                                    <li>Alchemy &mdash; How much you know about chemistry and potions</li>
+                                    <li>Occult &mdash; How much you know about spells, magical items, cults, religions,
+                                        and supernatural beings</li>
+                                    <li>Nature &mdash; How much you know about plants, animals, and surviving in the
+                                        wilds</li>
+                                    <li>Forgery &mdash; How much you know about official paperwork and how to forge
+                                        fakes of them along with signatures, seals, and other features</li>
+                                </ul>
+                                <p><em>Instinct</em></p>
+                                <ul>
+                                    <li>Perception &mdash; How well you are able to notice things through your senses</li>
+                                    <li>Investigation &mdash; How good you are at finding items difficult to spot and
+                                        examining your surroundings</li>
+                                    <li>Hunting &mdash; How well you are able to locate and track animals in the
+                                        wilderness</li>
+                                    <li>Animal Handling &mdash; How well you are able to handle and control
+                                        non-humanoid animals</li>
+                                </ul>
+                                <p><em>Charisma</em></p>
+                                <ul>
+                                    <li>Persuasion &mdash; How well you can negotiate, barter, and perform diplomacy</li>
+                                    <li>Deception &mdash; How well you can lie, mislead, or disguise yourself</li>
+                                    <li>Intimidation &mdash; How well you can threaten someone</li>
+                                    <li>Entertainment &mdash; How well you can impress a crowd, sing, tell jokes, or
+                                        dance</li>
+                                    <li>Streetwise &mdash; How well you get along with the common folk on the street,
+                                        and are able to gather clues and rumours</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h2>Checks</h2>
+                        <a id="Checks" class="anchor"></a>
+                        <div class="contentBlockWrapper">
+                            <div class="contentBlock">
+                                <p><strong>Checks</strong> are made whenever a player character attempts to do
+                                    something that is not guaranteed to succeed, such as picking a lock or hitting
+                                    someone with a sword.</p>
+                                <p>A check is a d20 roll made against a <strong>target number</strong> (<strong>TN</strong>).
+                                    Checks made by character&rsquo;s use a specific attribute that is then added to the
+                                    roll. A check is a success if the rolled number is equal or greater than the TN.</p>
+                                <p>When a player wishes to do something, the GM will tell them what kind of a check
+                                    they will have to make, and what TN it will be made against. If a player also
+                                    wishes to know what the consequences of failing are, they can ask the GM.</p>
+                                <h3>Skill Checks</h3>
+                                <p>Often, specific skills will be used to make a check. These checks are known as
+                                    <strong>skill checks</strong>.</p>
+                                <p>When making a skill check, you add 5 to your roll per level of skill. For example,
+                                    if a character with an Agility of 3 and two levels of skill in Dexterity attempts
+                                    to pick a lock they will roll d20 + 3 + 10.</p>
+                                <h3>Target Numbers</h3>
+                                <p>The following table is a guideline for how the GM should set the TN for a check.</p>
+                                <table cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr style="display: hidden;"></tr>
+                                        <tr>
+                                            <td style="text-align: center;">
+                                                <p>&nbsp;</p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p>&nbsp;</p>
+                                            </td>
+                                            <td style="text-align: center;" colspan="6" width="445">
+                                                <p>Probability of success</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;">
+                                                <p><strong>TN</strong></p>
+                                            </td>
+                                            <td style="text-align: center;" class="minHideTableCell">
+                                                <p><strong>Difficulty</strong></p>
+                                            </td>
+                                            <td style="text-align: center;" class="midHideTableCell">
+                                                <p><strong>d20-5</strong></p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p><strong>d20</strong></p>
+                                            </td>
+                                            <td style="text-align: center;" class="minHideTableCell">
+                                                <p><strong>d20+5</strong></p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p><strong>d20+10</strong></p>
+                                            </td>
+                                            <td style="text-align: center;" class="midHideTableCell">
+                                                <p><strong>d20+15</strong></p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p><strong>d20+20</strong></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;">
+                                                <p>10</p>
+                                            </td>
+                                            <td style="text-align: center;" class="minHideTableCell">
+                                                <p>Easy</p>
+                                            </td>
+                                            <td style="text-align: center;" class="midHideTableCell">
+                                                <p>30%</p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p>55%</p>
+                                            </td>
+                                            <td style="text-align: center;" class="minHideTableCell">
+                                                <p>80%</p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p>100%</p>
+                                            </td>
+                                            <td style="text-align: center;" class="midHideTableCell">
+                                                <p>100%</p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p>100%</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;">
+                                                <p>15</p>
+                                            </td>
+                                            <td style="text-align: center;" class="minHideTableCell">
+                                                <p>Medium</p>
+                                            </td>
+                                            <td style="text-align: center;" class="midHideTableCell">
+                                                <p>5%</p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p>30%</p>
+                                            </td>
+                                            <td style="text-align: center;" class="minHideTableCell">
+                                                <p>55%</p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p>80%</p>
+                                            </td>
+                                            <td style="text-align: center;" class="midHideTableCell">
+                                                <p>100%</p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p>100%</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;">
+                                                <p>20</p>
+                                            </td>
+                                            <td style="text-align: center;" class="minHideTableCell">
+                                                <p>Difficult</p>
+                                            </td>
+                                            <td style="text-align: center;" class="midHideTableCell">
+                                                <p>&ndash;</p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p>5%</p>
+                                            </td>
+                                            <td style="text-align: center;" class="minHideTableCell">
+                                                <p>30%</p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p>55%</p>
+                                            </td>
+                                            <td style="text-align: center;" class="midHideTableCell">
+                                                <p>80%</p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p>100%</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;">
+                                                <p>25</p>
+                                            </td>
+                                            <td style="text-align: center;" class="minHideTableCell">
+                                                <p>Hard</p>
+                                            </td>
+                                            <td style="text-align: center;" class="midHideTableCell">
+                                                <p>&ndash;</p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p>&ndash;</p>
+                                            </td>
+                                            <td style="text-align: center;" class="minHideTableCell">
+                                                <p>5%</p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p>30%</p>
+                                            </td>
+                                            <td style="text-align: center;" class="midHideTableCell">
+                                                <p>55%</p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p>80%</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;">
+                                                <p>30</p>
+                                            </td>
+                                            <td style="text-align: center;" class="minHideTableCell">
+                                                <p>Herculean</p>
+                                            </td>
+                                            <td style="text-align: center;" class="midHideTableCell">
+                                                <p>&ndash;</p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p>&ndash;</p>
+                                            </td>
+                                            <td style="text-align: center;" class="minHideTableCell">
+                                                <p>&ndash;</p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p>5%</p>
+                                            </td>
+                                            <td style="text-align: center;" class="midHideTableCell">
+                                                <p>30%</p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p>55%</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;">
+                                                <p>35</p>
+                                            </td>
+                                            <td style="text-align: center;" class="minHideTableCell">
+                                                <p>Implausible</p>
+                                            </td>
+                                            <td style="text-align: center;" class="midHideTableCell">
+                                                <p>&ndash;</p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p>&ndash;</p>
+                                            </td>
+                                            <td style="text-align: center;" class="minHideTableCell">
+                                                <p>&ndash;</p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p>&ndash;</p>
+                                            </td>
+                                            <td style="text-align: center;" class="midHideTableCell">
+                                                <p>5%</p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p>30%</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;">
+                                                <p>40</p>
+                                            </td>
+                                            <td style="text-align: center;" class="minHideTableCell">
+                                                <p>Superhuman</p>
+                                            </td>
+                                            <td style="text-align: center;" class="midHideTableCell">
+                                                <p>&ndash;</p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p>&ndash;</p>
+                                            </td>
+                                            <td style="text-align: center;" class="minHideTableCell">
+                                                <p>&ndash;</p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p>&ndash;</p>
+                                            </td>
+                                            <td style="text-align: center;" class="midHideTableCell">
+                                                <p>&ndash;</p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p>5%</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <div class="chapter">
+                <h1>
+                    <span>Combat</span>
+                </h1>
+                <h2>The Basics of Combat</h2>
+                <a id="The Basics of Combat" class="anchor"></a>
+                <div class="contentBlockWrapper">
+                    <div class="contentBlock">
+                        <img src="rulebook_images/fighter.svg" class="blockImage lightmodeImage" height="300" width="300">
+                        <img src="rulebook_images/fighterDarkmode.svg" class="blockImage darkmodeImage hidden-content"
+                            height="300" width="300">
+                        <p>Combat is broken down into rounds of combat, usually referred to as <strong>rounds</strong>.</p>
+                        <p>During a round every side of the battle takes a <strong>turn </strong>one after another.</p>
+                        <p>During a turn every character on that side may do various things such as cast spells, swing
+                            swords, and drink potions.</p>
+                        <p>Characters on the same side act simultaneously or in any order they wish. For example,
+                            during a turn a character can first do something, then wait for another character to act,
+                            and then do something else.</p>
+
+
+                        <h3>The Start of Combat</h3>
+                        <p>At the start of combat, the GM decides which side of the battle acts first. Usually, this
+                            will be the side initiating combat, the first to draw their weapons or charge forward.</p>
+                        <p>If no side is acting before the others, all sides choose one character among them to make an
+                            agility roll. The order of combat is defined by these rolls, with the sides with higher
+                            rolls acting first. If multiple characters roll the same value, they roll between
+                            themselves to determine the order.</p>
+                        <h3>The Round and the Turn</h3>
+                        During a round every character may take an action, a minor action, and they may move up to
+                        their movement.
+                        Additionally, all characters can talk freely, within reason.
+                        A character may also declare that they would like to take a <strong>delayed turn</strong> and
+                        act out of turn
+                        order.
+                    </div>
+                </div>
+
+                <h2>Types of Combat</h2>
+                <a id="Types of Combat" class="anchor"></a>
+                <div class="contentBlockWrapper">
+                    <div class="contentBlock">
+                        <p>Combat in can be played out in one of two ways: <strong>quick combat</strong> and <strong>tactical
+                                combat</strong>.</p>
+                        <p>Quick combat is played similarly to normal gameplay with the GM describing the situation and
+                            the players telling the GM what their characters wish to do.</p>
+                        <p>Tactical combat is played using a grid with tokens and follows a much more comprehensive
+                            ruleset.</p>
+                        <p>Generally, only relatively short and simple battles should be played using quick combat. A
+                            battle with many characters or a lot of complexity is hard to keep track of without the use
+                            of tokens and a grid. Tactical combat is not necessary for something simple like beating up
+                            one or two guards, if anything having to set up the grid and tokens for such a battle would
+                            slow the game down.</p>
+                        <p>The rules do work whichever method of running combat you decide on, and you can play using
+                            only one of the systems, or without any combat at all.</p>
+                        <p>If you choose not to use tactical combat, you ought to avoid having large fights, and
+                            instead have the game mainly be focused on things other things such as exploration,
+                            investigation, or social interaction.</p>
+                    </div>
+                </div>
+
+                <h2>Range</h2>
+                <a id="Range" class="anchor"></a>
+                <div class="contentBlockWrapper">
+                    <div class="contentBlock">
+                        <p>Manoeuvres, spells, and other abilities list a range at which they can be used. Range is
+                            noted as the number of tiles from you to the target. A range of 1 tile means that the
+                            target must be adjacent, 2 tiles that there is one tile between you and the target.</p>
+                        <p>You can think of 1 tile as being approximate to 1 metre.</p>
+                        <p>When a range is noted in tiles, it is accompanied by one of the following ranges: self,
+                            melee, close, short, long, and distant. The ranges are always used outside of tactical
+                            combat for quick combat, chases, and general adventuring. Close, short, long, and distant
+                            are shortened to C, S, L, and D.</p>
+                        <table cellspacing="0" cellpadding="0">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p>Self</p>
+                                    </td>
+                                    <td>
+                                        <p>0 tiles (Only the character itself)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Melee</p>
+                                    </td>
+                                    <td>
+                                        <p>1 tile</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Close (C)</p>
+                                    </td>
+                                    <td>
+                                        <p>2 tiles</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Short (S)</p>
+                                    </td>
+                                    <td>
+                                        <p>3&ndash;6 tiles</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Long (L)</p>
+                                    </td>
+                                    <td>
+                                        <p>7&ndash;12 tiles</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Distant (D)</p>
+                                    </td>
+                                    <td>
+                                        <p>13&ndash;24 tiles</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>&nbsp;</p>
+                        <p>A range can either be the exact range they need to be in, such as &ldquo;2 tiles (C)&rdquo;
+                            meaning the target cannot be in melee range but exactly 2 tiles away in short range or as a
+                            range within two distances such as &ldquo;Melee &ndash; 6 tiles (S)&rdquo; meaning any
+                            character between melee and short range, 1 to 6 tiles.</p>
+                        <p>When in quick combat, describe distance using these ranges, e.g. &ldquo;One of the guards is
+                            in short range and the two others are in long range.&rdquo;&nbsp; This will make it easier
+                            for the players to know which of their abilities can be used effectively on which targets.</p>
+                    </div>
+                </div>
+
+                <h2>Direction</h2>
+                <a id="Direction" class="anchor"></a>
+                <div class="contentBlockWrapper">
+                    <div class="contentBlock">
+                        <p>In quick combat there is an infinite amount of directions, just like in the physical world.</p>
+                        <p>In tactical combat there are 8 main directions, which are used when a spell or manoeuvre
+                            asks for a direction.</p>
+                        <p>In some rare cases, you may have to use additional directions for up and down, and between
+                            those and the main directions.</p>
+                    </div>
+                </div>
+
+                <h2>Movement</h2>
+                <a id="Movement" class="anchor"></a>
+                <div class="contentBlockWrapper">
+                    <div class="contentBlock">
+                        <p>Every turn characters may move up to their movement, which for players is 10 tiles. You may
+                            move diagonally at no additional cost.</p>
+                        <p>You do not need to use all of your movement at once. You may move, take an action, move,
+                            take a minor action, move, as long as your total movement does not exceed your movement.</p>
+                        <p>You cannot end your move on a tile that is already occupied by another character, however
+                            you may move through another character if they agree to it.</p>
+                        <p><em>Jumping and climbing:</em></p>
+                        <p>You can jump a number of tiles equal to your strength or 2, whichever is higher.</p>
+                        <p>Every tile of movement going vertically up costs an additional point of movement. Similarly,
+                            jumping a tile upwards costs 2 tiles of movement.</p>
+                        <p>Falling down does not cost any movement.</p>
+                        <p>Descending, for example climbing down a ladder, costs 1 movement per tile.</p>
+                        <p><em>In quick combat:</em></p>
+                        <p>A character moves one range unit at a time, moving from long range to short, close to melee,
+                            etc.</p>
+                    </div>
+                </div>
+
+                <h2>Attacks</h2>
+                <a id="Attacks" class="anchor"></a>
+                <div class="contentBlockWrapper">
+                    <div class="contentBlock">
+                        <p><strong>Attacks</strong> are a special kind of check, which most of the time require you to
+                            make a roll using a d20 against the targets agility or instinct.</p>
+                        <p>Attacks are usually made when using a spell, manoeuvre, or a basic attack, but other cases
+                            such as the usage of magical items can still ask for you to make an attack. When an ability
+                            mentions attacks, it means all attacks, not just basic attacks.</p>
+                        <p><em>Physical attacks:</em></p>
+                        <p>All attacks that are made by hitting someone with a part of their body or another object.
+                            For example, unarmed attacks, attacks made with melee weapons, spell attacks that use
+                            touch.</p>
+                        <p><em>Ranged attacks:</em></p>
+                        <p>All attacks that are made by hitting someone with a missile that is shot, or a weapon that
+                            is thrown. For example, a fireball or lightning bolt spell, shooting someone with an arrow,
+                            or throwing an axe.</p>
+                        <p><em>Spell attacks:</em></p>
+                        <p>All attacks that are a part of a spell. Spell attacks are almost always also a physical or a
+                            ranged attack. Only attacks made as a part of a spell are spell attacks. If a spell mind
+                            controls a character to attack someone, that is not a spell attack, since it was not part
+                            of a spell, only caused by one</p>
+                    </div>
+                </div>
+
+                <h2>Basic Attacks</h2>
+                <a id="Basic Attacks" class="anchor"></a>
+                <div class="contentBlockWrapper">
+                    <div class="contentBlock">
+                        <p>A basic attack is an attack that is made without a manoeuvre, a spell, or similar ability.</p>
+                        <p>To make a basic attack against a target, roll 1d20 + Ability Score against the
+                            target&rsquo;s defence. If your roll matches or exceeds it, you hit.</p>
+                        <p>Unless otherwise specified, all ranged attacks use agility, and all physical attacks use
+                            strength.</p>
+                    </div>
+                </div>
+
+                <h2>Attacks of Opportunity</h2>
+                <a id="Attacks of Opportunity" class="anchor"></a>
+                <div class="contentBlockWrapper">
+                    <div class="contentBlock">
+                        <p>Doing certain things in melee range of another character may allow them to do an attack of
+                            opportunity.</p>
+                        <p>An attack of opportunity is a melee basic attack. You may take it with any melee weapon you
+                            are carrying or make an unarmed or improvised attack.</p>
+                        <p><em>Things that provoke attacks of opportunity:</em></p>
+                        <ul>
+                            <li>Casting a spell or performing a manoeuvre that states that it provokes attacks of
+                                opportunity</li>
+                            <li>Using a basic attack with a two-handed ranged weapon</li>
+                            <li>Performing first aid action</li>
+                            <li>Moving out of melee range from another creature</li>
+                            <li>Moving within the melee range of another creature</li>
+                        </ul>
+                        <p>Note that this only applies to moving, not shifting<strong>.</strong></p>
+                        <p>Attacks of opportunity happen before the action that provoked them is done. If a character
+                            tries to move away from your melee range and your attack of opportunity makes them fall
+                            unconscious, their movement is cancelled, and they stay within melee range. If a character
+                            attempts a two-handed ranged weapon attack and your attack of opportunity kills them, the
+                            ranged attack is not made.</p>
+                    </div>
+                </div>
+
+                <h2>Shifting</h2>
+                <a id="Shifting" class="anchor"></a>
+                <div class="contentBlockWrapper">
+                    <div class="contentBlock">
+                        <p><strong>Shifting</strong> is movement that does not provoke attacks of opportunity. A
+                            character cannot shift unless a manoeuvre, spell, or other ability specifically allows them
+                            to do so.</p>
+                    </div>
+                </div>
+
+                <h2>Defence</h2>
+                <a id="Defence" class="anchor"></a>
+                <div class="contentBlockWrapper">
+                    <div class="contentBlock">
+                        <p>As a player, when attacked you will make a defence check. Unless it is otherwise specified,
+                            you make defence rolls using your agility. Some abilities allow you to defend using other
+                            attributes instead, and some attacks are made against attributes other than what you defend
+                            with.</p>
+                    </div>
+                </div>
+
+                <h2>Being Prone</h2>
+                <a id="Being Prone" class="anchor"></a>
+                <div class="contentBlockWrapper">
+                    <div class="contentBlock">
+                        <p>Melee attacks against prone targets gain advantage.</p>
+                        <p>While prone, every tile of movement costs an additional point of movement.</p>
+                        <p>You may get up from being prone as a minor action.</p>
+                        <p>On your turn you may fall prone for free as a part of your move.</p>
+                        <p>Being prone may allow you to use cover more effectively, gaining cover in places where a
+                            person standing would not gain it.</p>
+                        <p>Being prone behind cover grants an additional level of advantage on top of what the cover
+                            already provides.</p>
+                    </div>
+                </div>
+
+                <h2>Difficult Terrain</h2>
+                <a id="Difficult Terrain" class="anchor"></a>
+                <div class="contentBlockWrapper">
+                    <div class="contentBlock">
+                        <p>Moving a tile over or through difficult terrain, such as a tar covered floor, or notably
+                            thick vegetation costs an additional point of movement per tile.</p>
+                        <p>If the terrain is remarkably difficult to move through it may even cost more points of
+                            movement per tile.</p>
+                        <p>If a spell or an effect is used to turn tiles that are already difficult terrain into
+                            difficult terrain the GM will rule whether or not the combination of the effect and the
+                            terrain in question would make the difficult terrain cost even more movement.</p>
+                        <p>In tactical combat, difficult terrain should always be marked on the grid.</p>
+                    </div>
+                </div>
+
+                <h2>Cover</h2>
+                <a id="Cover" class="anchor"></a>
+                <div class="contentBlockWrapper">
+                    <div class="contentBlock">
+                        <p>When attacking a target in cover, you gain disadvantage on your attack check.</p>
+                        <p>When defending against an attack while in cover, you gain advantage on your defence check.</p>
+                        <p>Cover only protects from the sides it realistically would, and characters can attempt to
+                            find an angle of attack that negates the cover.</p>
+                        <p>In rare cases the GM may rule that cover gives multiple levels of advantage and
+                            disadvantage. For example, if you are almost fully behind cover, the GM may rule that your
+                            defence gains double advantage.</p>
+                        <p>In tactical combat, cover that grants multiple levels of advantage, is good to have marked
+                            on the grid.</p>
+                    </div>
+                </div>
+
+                <h2>Actions</h2>
+                <a id="Actions" class="anchor"></a>
+                <div class="contentBlockWrapper">
+                    <div class="contentBlock">
+                        <p>Using an action, you can cast spells and perform manoeuvres with the time of &ldquo;1
+                            action&rdquo;, use a basic attack, or do one of the following things:</p>
+                        <ul>
+                            <li>Grapple</li>
+                            <li>Shove</li>
+                            <li>Help</li>
+                            <li>Perform first aid</li>
+                            <li>Gain an additional minor action</li>
+                            <li>Do a situational action</li>
+                        </ul>
+                        <h3>Grapple</h3>
+                        <p>As an action, you can attempt to grapple a character in melee range. The grappler contests
+                            their strength against the targets strength or agility, their choice.</p>
+                        <p><em>While grappling a target:</em></p>
+                        <ul>
+                            <li>You gain advantage on all melee attacks against the target.</li>
+                            <li>One of your hands is occupied by the grappling of the target, meaning you cannot use
+                                two-handed weapons.</li>
+                            <li>On your turn, you can choose to stop grappling the target.</li>
+                            <li>You can use your movement to shift the grappled target within melee range.</li>
+                            <li>You can move as long as you don&rsquo;t leave melee range of the target.</li>
+                            <li>You can use your movement to move yourself and shift the target at the same time as
+                                long as you stay in melee range.</li>
+                        </ul>
+                        <p><em>While being grappled:</em></p>
+                        <ul>
+                            <li>All attacks against you gain advantage.</li>
+                            <li>You cannot use two-handed weapons.</li>
+                            <li>You cannot move.</li>
+                            <li>As a minor action, you may attempt to escape the grapple. To do so contest your agility
+                                against the grappler&rsquo;s strength.</li>
+                            <li>As a minor action, you may attempt to escape the grapple and grapple the grappler. To
+                                do so contest your strength against their strength.</li>
+                        </ul>
+                        <p>If the grappled character or the grappler is shifted, the grappled can choose to escape the
+                            grapple.</p>
+                        <p>Two characters can never grapple each other at the same time.</p>
+                        <p>A character can grapple multiple different targets at the same time.</p>
+                        <p>A character can be grappled by many grapplers at once.</p>
+                        <h3>Shove</h3>
+                        <p>As an action, you can shift a character or an object in melee range back a number of tiles
+                            equal to your strength, or none if your strength is negative. You can only shove characters
+                            and objects that are of such a size and weight that your character could realistically push
+                            them.</p>
+                        <h3>Help</h3>
+                        <p>You can grant advantage on one check to another character in melee range. You can only help
+                            with checks your character could actually help with. For example, distracting someone to
+                            make it easier for your friend to pickpocket them, reaching out to help them climb, or
+                            smacking away a foe&rsquo;s shield or weapon to help your friend attack.</p>
+                        <h3>Perform First Aid</h3>
+                        <p>As an action, you can heal a bloodied character in melee range. If the healing would raise
+                            the character&rsquo;s health to above half of their maximum health, they are instead healed
+                            to half of their health + 1.</p>
+                        <p>You cannot perform first aid on yourself.</p>
+                        <p>Performing first aid provokes attacks of opportunity.</p>
+                        <p>The amount of healing done increases with levels of skill in Medicine (KNO).</p>
+                        <table cellspacing="0" cellpadding="0">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p>No Levels of Skill</p>
+                                    </td>
+                                    <td>
+                                        <p>1d6 + Knowledge</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>1 Level</p>
+                                    </td>
+                                    <td>
+                                        <p>2d6 + Knowledge</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>2 Levels</p>
+                                    </td>
+                                    <td>
+                                        <p>3d6 + Knowledge</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>3 Levels</p>
+                                    </td>
+                                    <td>
+                                        <p>4d6 + Knowledge</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3>Gaining an Additional Minor Action</h3>
+                        <p>You may use your action to instead take an additional minor action of your choice this turn.</p>
+                        <h3>Situational Actions</h3>
+                        <p>During your turn you may want to do something that does not fit into any of the predefined
+                            actions, such as searching over a body, intimidating foes, or searching for hidden
+                            switches.</p>
+                        <p>If the action would realistically take around 6 seconds or less, and your character could do
+                            it, you may do it as a situational action.</p>
+                        <p>The GM will then rule what kind of a check, if any, is to be rolled to determine your
+                            success.</p>
+                    </div>
+                </div>
+
+                <h2>Minor Actions</h2>
+                <a id="Minor Actions" class="anchor"></a>
+                <div class="contentBlockWrapper">
+                    <div class="contentBlock">
+                        <p>Using a minor action, you can cast spells and perform manoeuvres with the time of &ldquo;1
+                            Minor Action&rdquo; or do one of the following things:</p>
+                        <ul>
+                            <li>Using items and consumables</li>
+                            <li>Do a situational minor action</li>
+                            <li>Get up from being prone</li>
+                        </ul>
+                        <h3>Using Items and Consumables</h3>
+                        <p>You may drink one potion or use one magical item that takes on minor action to use, or use
+                            other similar items, for example a torch to light a bonfire.</p>
+                        <p>Alternatively, you may also have an agreeing character in melee range drink a potion from
+                            you.</p>
+                        <h3>Situational Minor Actions</h3>
+                        <p>During your turn you may want to do something that does not fit into any of the predefined
+                            minor actions, such as pressing a button, searching a single pocket of a corpse, or wiping
+                            your hand clean of noxious slime.</p>
+                        <p>If the action would realistically take around 2 seconds or less, and your character could do
+                            it, you may do it as a situational minor action.</p>
+                        <p>The GM will then rule what kind of a check, if any, is to be rolled to determine your
+                            success. Situational minor actions rarely require checks, since most things that would be
+                            difficult enough to warrant one are proper actions, and not minor actions.</p>
+                        <h3>Get up from being prone</h3>
+                        <p>As a minor action, you may get up from being prone.</p>
+                    </div>
+                </div>
+
+                <h2>Delayed Turns</h2>
+                <a id="Delayed Turns" class="anchor"></a>
+                <div class="contentBlockWrapper">
+                    <div class="contentBlock">
+                        <p>A character may disrupt the regular flow of combat by declaring that they would like to take
+                            a <strong>delayed turn</strong>. This allows you to take your turn in the middle of another
+                            side&rsquo;s turn.</p>
+                        <p>Doing so means you cannot move, take your action or minor action, or do anything else on
+                            your actual turn.</p>
+                        <p>Before doing anything on your turn, declare that you would like to take a delayed turn and
+                            specify what will be the <strong>trigger</strong> for it.</p>
+                        <p>The trigger is a single sentence, which describes a specific circumstance upon which you
+                            will start your delayed turn.</p>
+                        <p>A delayed turn declaration might sound something like &ldquo;I would like to take a delayed
+                            turn when a hostile character goes through the doorway closest to me.&rdquo;</p>
+                        <p>The trigger in this declaration is &ldquo;A hostile character goes through the doorway
+                            closes to me.&rdquo;</p>
+                        <p>If this circumstance happens before it would be your turn again, you may then at that moment
+                            interrupt the ongoing turn and take your own. The hostile character will stop just
+                            after completing the circumstance of the trigger, in this case moving through the doorway.</p>
+                        <p>After you take your delayed turn, the round continues from where it left off.</p>
+                        <p>If the declared trigger does not come up before it&rsquo;s your turn again, you will have
+                            wasted your turn.</p>
+                        <p>Also note that the GM is aware of what your trigger is and is allowed to play around it, for
+                            example, avoiding triggering it (although a friendly GM shouldn&rsquo;t make it their life
+                            goal to avoid all triggers).</p>
+                        <p>The Game Master is allowed to take delayed turns but should do so sparingly to not
+                            overcomplicate combat.</p>
+                        <p>&nbsp;</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="gutter" id="rightGutter"></div>
+    </div>
+
+    <div id="cookieCotnainer">
+        <div id="cookieText">
+            This site uses cookies to store entered information.
+        </div>
+        <div id="cookieButton">
+            ACCEPT
+        </div>
+    </div>
+</body>
+
+</html>
