@@ -1,0 +1,759 @@
+:root{
+    --mainll: #96BA8B;
+    --mainl: #6C975F;
+    --main: #4F7942;
+    --maind: #356127;
+    --maindd: #204B13;
+    --bg: #FFDED3;
+    --sheetbg: white;
+    --text: #FFFFFF;
+    --bodytext: #231f20;
+    --border: #231f20;
+    --line: #ccc;
+    --attributeShadow: rgba(204, 204, 204, 0.25);
+    --heading: #356127;
+    --subheading: #356127;
+    --categoryBorder: #4F7942;
+}
+
+.darkmode{
+    --mainll: #4C4C59;
+    --mainl: #393b42;
+    --main: #18181B;
+    --maind: #0F0F0F;
+    --maindd: #040404;
+    --bg: #26272A;
+    --sheetbg: #18181B;
+    --text: #FFFFFF;
+    --bodytext: #D8D8D8;
+    --border: #4C4C59;
+    --line: #393b42;
+    --attributeShadow: #26272A;
+    --heading: #D8D8D8;
+    --categoryBorder: #D8D8D8;
+}
+
+.hidden-content {
+    display: none!important;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 0em;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--maind); 
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--mainl);
+    border: 1px solid var(--maind);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--mainl); 
+}
+html {
+    font-size: 100%;
+  }
+
+body{
+    background: var(--bg);
+    color: var(--text);
+    font-size: 1em;
+}
+
+textarea, select, input, button, p, div { outline-color: #4F7942; }
+
+h1{
+    letter-spacing: 2px;
+    position: relative;
+    text-align: center;
+    font-size: 1.3em;
+    color: var(--heading);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+a{
+    text-decoration: none;
+}
+
+input{
+    color: var(--bodytext);
+    background: rgba(0,0,0,0)
+}
+
+#headerContainer{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--main);
+    max-height: 3em;
+    height: 3em;
+    padding: 0.1em 1.5em 0.1em 0.5em;
+}
+
+#title{
+    display: none;
+}
+
+#shortTitle{
+    display: inherit;
+    padding-right: 0.2em;
+}
+
+#title, #shortTitle{
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.75em;
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 0.3em;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-right: 0.2em;
+}
+#headerSpacer{
+    flex-grow: 1;
+}
+
+.headerButton{
+    padding: 1em;
+    -webkit-user-select: none;        
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+
+#portalButtonText{
+    color: var(--text);
+}
+
+#portalButton{
+    width: 4em;
+}
+
+#darkmodeButton{
+    width: 4em;
+}
+
+#pageContainer{
+    margin-top: 3.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#characterSheet{
+    max-width: 98vw;
+    background-color: var(--sheetbg);
+    color: var(--bodytext);
+    padding: 0.5em 1em 1em 1em;
+    z-index: 1;
+}
+
+#topbar{
+    border: 1px solid var(--border);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#characterNameWrapper{
+    width: 100%;
+}
+
+#characterLevelWrapper{
+    width: 25%;
+}
+
+#characterClassWrapper{
+    width: 75%;
+}
+
+
+#characterName, #characterLevel, #characterClass{
+    width: 100%;
+}
+
+
+#characterNameLabel, #characterLevelLabel, #characterClassLabel{
+    margin: 2px 0 0 2px;
+    font-size: 7pt;
+    position: absolute;
+    z-index: 2;
+}
+
+.tbtextBox{
+    padding-top: 6pt;
+    font-size: 16pt;
+    z-index: 5;
+    height: 22pt;
+    width: 97%;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+}
+
+#sheetbodyWrapper{
+    width: 100%;
+    max-width: 832px;
+}
+
+#attributeThirdWrapper, #resourcesThirdWrapper, #rpThirdWrapper{
+    width: 100%;
+    margin-top: 2px;
+}
+
+#attributeThird{
+    background-color: var(--attributeShadow);
+}
+
+.attributeWrapper{
+    border-top: 1px solid var(--border);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: top;
+    flex-wrap: nowrap;
+    margin: 0.05em 0 0.25em;
+}
+
+.attribute{
+    border: 1px solid var(--border);
+    background-color: var(--sheetbg);
+    border-top: 0;
+    width: 6em;
+    height: 6em;
+    position: relative;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes overlayAnimation {
+    0%   {box-shadow: inset 0 0 150px -10px var(--overlayColor);}
+    50%   {box-shadow: inset 0 0 150px -15px var(--overlayColor);}
+    100%   {box-shadow: inset 0 0 150px -10px var(--overlayColor);}
+  }
+
+#strengthOverlay0{
+    --overlayColor: #e6261f;
+}
+
+#agilityOverlay1{
+    --overlayColor: #a3e048;
+}
+
+#vitalityOverlay2{
+    --overlayColor: #f7d038;
+}
+
+#knowledgeOverlay3{
+    --overlayColor: #4355db;
+}
+
+#instinctOverlay4{
+    --overlayColor: #eb7532;
+}
+
+#charismaOverlay5{
+    --overlayColor: #d23be7;
+}
+
+.attributeOverlay{
+    z-index: 5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation-name: overlayAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.cornerI, .cornerO{
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.cornerI{
+    z-index: 3;
+}
+
+.cornerO{
+    z-index: 2;
+}
+
+.attributeCornerTLI{
+    border-right: 4px solid transparent;
+    border-left: 4px solid var(--sheetbg);
+    border-bottom: 4px solid transparent;
+    left: 0;
+    top: 0;
+}
+
+.attributeCornerTLO{
+    border-right: 5px solid transparent;
+    border-left: 5px solid var(--border);
+    border-bottom: 5px solid transparent;
+    left: 0;
+    top: 0;
+}
+
+.attributeCornerTRI{
+    border-left: 3px solid transparent;
+    border-right: 3px solid var(--sheetbg);
+    border-bottom: 3px solid transparent;
+    right: 0;
+    top: 0;
+}
+
+.attributeCornerTRO{
+    border-left: 4px solid transparent;
+    border-right: 4px solid var(--border);
+    border-bottom: 4px solid transparent;
+    right: 0;
+    top: 0;
+}
+
+.attributeCornerBLI{
+    border-left: 3px solid transparent;
+    border-left: 3px solid var(--sheetbg);
+    border-top: 3px solid transparent;
+    left: 0;
+    bottom: 0;
+}
+
+.attributeCornerBLO{
+    border-left: 4px solid transparent;
+    border-left: 4px solid var(--border);
+    border-top: 4px solid transparent;
+    left: 0;
+    bottom: 0;
+}
+
+.attributeCornerBRI{
+    border-left: 3px solid transparent;
+    border-right: 3px solid var(--sheetbg);
+    border-top: 3px solid transparent;
+    right: 0;
+    bottom: 0;
+}
+
+.attributeCornerBRO{
+    border-left: 4px solid transparent;
+    border-right: 4px solid var(--border);
+    border-top: 4px solid transparent;
+    right: 0;
+    bottom: 0;
+}
+
+.skillBalls{
+    padding-left: 5px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.skillBall{
+    margin-top: 1px;
+    margin-right: 5px;
+    border: 1px solid var(--border);
+    background: var(--sheetbg);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.ballActive{
+    background: var(--bodytext);
+}
+
+.scoreLegendShort, .scoreLegend{
+    z-index: 10;
+    position: relative;
+    text-align: center;
+    pointer-events: none;
+    margin-top: 2px;
+}
+
+.scoreLegend{
+    display: none;
+}
+
+.score > div{
+    z-index: 50;
+    text-align: center;
+    margin-top: -0.45em;
+    padding: 0.6em 0 0.4em 0;
+    font-size: 34pt;
+    height: 100%;
+}
+
+.skills{
+    margin-top: 1px;
+}
+
+.skill{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: nowrap;
+    font-size: 12pt;
+    margin-top: 1px;
+}
+
+.skillname{
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+#mobileResourcesWrapper{
+    width: 100%;
+    margin-left: -1px;
+}
+
+#mobileResources{
+    width: calc(100% + 2px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.mobileResourceWrapper{
+    width: 50%;
+    margin: 1px;
+    border: 1px var(--border) solid;
+}
+
+.mobileMaxResource{
+    height: 17pt;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.mobileMaxResourceLegend{
+    font-size: 11pt;
+    white-space: nowrap;
+}
+
+.mobileResourceLegend{
+    text-align: center;
+    font-size: 11pt;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+#inventoryWrapper{
+    border: 1px solid var(--border);
+}
+
+#inventoryLegend{
+    margin-top: 1px;
+    text-align: center;
+}
+
+.inventoryTriangle{
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 3.5px 0 3.5px 6.1px;
+    margin-top: 13px;
+    border-color: transparent transparent transparent var(--bodytext);
+    z-index: -2;
+    pointer-events: none;
+    position: absolute;
+}
+
+.inventory{
+    font-size: 14pt;
+    height: 16.5pt;
+    white-space: nowrap;
+    overflow-x: hidden;
+    border-bottom: 1px solid var(--line);
+    padding: 5.3px 0 5.3px 10px;
+}
+
+#wealth{
+    font-size: 14pt;
+    height: 16.5pt;
+    white-space: nowrap;
+    overflow-x: hidden;
+    border-bottom: 1px solid var(--line);
+    padding: 5px 0 0 5px;
+    margin: 0 1em 5px 4.75em;
+}
+
+#wealthLegend{
+    z-index: -2;
+    margin-top: 6px;
+    margin-left: 5px;
+    pointer-events: none;
+    position: absolute;
+}
+
+#maxMana, #maxHealth{
+    text-align: center;
+    font-size: 11pt;
+    height: 11pt;
+    padding: 0.2em 0.1em 0.2em 0.1em;
+    border-bottom: solid 1px var(--line);
+    width: 40%;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+#mana, #health{
+    text-align: center;
+    padding: 0.25em 0 0.25em 0;
+    font-size: 36pt;
+    height: 41pt;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+#determinationContainer{
+    height: 35px;
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: row;
+}
+
+#determinationBox{
+    border-right: 1px solid var(--border);
+    position: relative;
+}
+
+#determination{
+    width: 2.75em;
+    height: 26pt;
+    font-size: 20pt;
+    text-align: center;
+    line-height: 28pt;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#determinationLegend{
+    margin: auto;
+}
+
+.rpBox{
+    border: 1px solid var(--border);
+    margin-top: 1px;
+}
+
+.rpBox > p{
+    font-size: 14pt;
+    height: 16.5pt;
+    white-space: nowrap;
+    overflow-x: hidden;
+    border-bottom: 1px solid var(--line);
+    padding: 5px 0 1px 10px;
+}
+
+.rpLegend{
+    font-size: 11pt;
+    margin-top: 3px;
+    margin-bottom: 1px;
+    text-align: center;
+}
+
+#sheetnotesWrapper{
+    width: 100%;
+    margin-top: 3px;
+}
+
+#sheetnotes{
+    width: calc(100%);
+}
+
+#sheetnotes > p{
+    max-width: 832px;
+    font-size: 14pt;
+    background-attachment: local;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 3px, transparent 3px),
+     linear-gradient(to left, rgba(255, 255, 255, 0) 3px, transparent 3px),
+    repeating-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 20px, var(--line) 20px, var(--line) 21px, rgba(255, 255, 255, 0) 21px);
+    line-height: 21px;
+    white-space: normal;
+}
+
+#cookieCotnainer{
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: var(--main);
+    bottom: 0;
+    width: 100%;
+}
+
+#cookieText{
+    font-size: 20pt;
+    margin-right: 1%;
+}
+
+#cookieButton{
+    letter-spacing: 0.5em;
+    padding-left: 1%;
+    font-size: 50pt;
+    text-align: center;
+    border: 5px solid yellow;
+    background-color: yellow;
+    color: black;
+    font-weight: bolder;
+    border-radius: 180px;
+}
+
+@media only screen and (min-width: 426px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+    #sheetbody{
+        height: 512px;
+        display: flex;
+        flex-direction: row;
+    }
+    #shortTitle{
+        display: none;
+    }
+    #title{
+        display: inherit;
+    }
+    #pageContainer{
+        margin-top: 4em;
+    }
+    #sheetnotesWrapper{
+        width: 100%;
+    }
+    #characterSheet{
+        max-width: 832px;
+        padding: 1em 1em 1em 1em;
+    }
+    #characterNameWrapper{
+        width: 60%;
+    }
+    #attributeThird{
+        height: 512px;
+    }
+    #characterLevelWrapper{
+        width: 10%;
+    }
+    #characterClassWrapper{
+        width: 30%;
+    }
+    #attributeThirdWrapper{
+        width: 271px;
+        margin-top: 0;
+        max-width: 362px;
+        margin-right: 1px;
+    }
+    .attributeWrapper{
+        margin: 0.05em 0 0.25em
+    }
+    #resourcesThirdWrapper{
+        width: 310px;
+        margin-top: 0;
+        padding-right: 2px;
+    }
+    #mobileResourcesWrapper{
+        width: calc(100% + 1px);
+    }
+    #inventoryWrapper{
+        width: calc(100% - 1px);
+    }
+    #rpThirdWrapper{
+        width: 262px;
+        padding-top: 1px;
+        margin-top: 0;
+    }
+    #determinationContainer{
+        width: 262px;
+    }
+    #rpThird{
+        height: 512px;
+    }
+    .scoreLegendShort{
+        display: none;
+    }
+    .scoreLegend{
+        display: block;
+        font-size: 9pt;
+    }
+    .skillBall {
+        width: 10px;
+        height: 10px;
+        margin-right: 3px;
+    }
+    .skill {
+        font-size: 10pt;
+    }
+    .skills{
+        white-space: nowrap;
+        overflow-x: hidden;
+    }
+    .attribute {
+        width: 5em;
+        height: 5em;
+    }
+    .rpBox{
+        width: 262px;
+    }
+    .rpBox > p{
+        font-size: 14pt;
+        height: 15pt;
+        white-space: nowrap;
+        overflow-x: hidden;
+        border-bottom: 1px solid var(--line);
+        padding: 5px 0 1px 10px;
+    }
+    .score > div{
+        padding: 0;
+        margin: -16px 0 0 0;
+        padding-top: 20px;
+        height: 60px;
+    }
+}
