@@ -239,7 +239,7 @@ function rollAttributes(character) {
 $('document').ready(function () {
     if (!localStorage.cArray) {
 
-        character = new Character("", "", "", "", "", "", "", "", "")
+        character = new Character("", "", "");
 
         characterArray = [character];
         localStorage.setItem("cArray", JSON.stringify(characterArray));
