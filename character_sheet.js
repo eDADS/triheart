@@ -391,9 +391,7 @@ $(function () {
             if (characterArray.length <= 1) {
                 character = new Character("", "", "", "", "", "", "", "", "", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "Notes:<br><br><br><br><br><br><br><br><br><br>", 0, false, false, false, false, false, false);
             } else {
-                alert(characterArray);
                 characterArray.splice(characterIndex, 1);
-                alert(characterArray);
                 characterIndex = (characterIndex > 1 ? characterIndex - 1 : characterIndex);
                 character = characterArray[characterIndex];
             }
