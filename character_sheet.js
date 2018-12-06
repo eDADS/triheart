@@ -320,6 +320,7 @@ $(function () {
             $("#characterManager").append($("<option value=" + i + "></option>").text((characterArray[i].name ? characterArray[i].name : "Character " + (i + 1))));
         }
         $("#characterManager").append($("<option id='createNewCharacter' value='CREATE'></option>").text("Create new character"));
+        $("#characterManager").val(characterIndex);
     });
 
     $('#characterManager').on('change', function () {
