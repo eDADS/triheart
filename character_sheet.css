@@ -75,7 +75,7 @@ body{
     font-size: 1em;
 }
 
-textarea, select, input, button, p, div { outline-color: #4F7942; }
+textarea, select, input, button, p, div, select { outline-color: #4F7942; }
 
 h1{
     letter-spacing: 2px;
@@ -163,7 +163,7 @@ a{
 }
 
 #pageContainer{
-    margin-top: 3.5em;
+    margin-top: 3.25em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -178,6 +178,54 @@ a{
     color: var(--bodytext);
     padding: 0.5em 1em 1em 1em;
     z-index: 1;
+}
+
+#controls{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: nowrap;
+    padding: 5px 0 5px 0;
+}
+
+#characterManager{
+    color: var(--bodytext);
+    background-color: var(--sheetbg);
+    border: 1px solid var(--border);
+    font-size: 1em;
+    width: 100%;
+    flex-grow: 1;
+    padding: 5px 3px 5px 3px;
+}
+
+select{
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.controlButton{
+    text-align: center;
+    padding: 6px 3px 5px 3px;
+    flex-grow: 0;
+    color: var(--bodytext);
+    background-color: var(--sheetbg);
+    border: 1px solid var(--border);
+    -webkit-user-select: none;        
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+#rollAttributesButton{
+    width: 180px;
+    flex-basis: 180px;
+    margin: 0 3px 0 3px;
+}
+
+#deleteCharacterButton{
+    width: 50px;
+    flex-basis: 50px;
 }
 
 #topbar{
@@ -232,7 +280,14 @@ a{
 
 #attributeThirdWrapper, #resourcesThirdWrapper, #rpThirdWrapper{
     width: 100%;
-    margin-top: 2px;
+}
+
+#attributeThirdWrapper, #resourcesThirdWrapper{
+    margin-top: 1px;
+}
+
+#rpThirdWrapper{
+    margin-top: 1px;
 }
 
 #attributeThird{
@@ -264,9 +319,9 @@ a{
 }
 
 @keyframes overlayAnimation {
-    0%   {box-shadow: inset 0 0 150px -10px var(--overlayColor);}
-    50%   {box-shadow: inset 0 0 150px -15px var(--overlayColor);}
-    100%   {box-shadow: inset 0 0 150px -10px var(--overlayColor);}
+    0%   {box-shadow: inset 0 0 100px -10px var(--overlayColor),0 0 15px 0 var(--overlayColor);}
+    50%   {box-shadow: inset 0 0 150px -15px var(--overlayColor),0 0 5px 0 var(--overlayColor);;}
+    100%   {box-shadow: inset 0 0 100px -10px var(--overlayColor),0 0 15px 0 var(--overlayColor);;}
   }
 
 #strengthOverlay0{
@@ -299,7 +354,7 @@ a{
     width: 100%;
     height: 100%;
     animation-name: overlayAnimation;
-    animation-duration: 2s;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
 }
 
@@ -399,6 +454,15 @@ a{
     cursor: pointer;
 }
 
+#skillTotal{
+    position: absolute;
+    right: 20px;
+    margin-top: 1px;
+    overflow-x: hidden;
+    white-space: nowrap;
+    font-size: 10pt;
+}
+
 .ballActive{
     background: var(--bodytext);
 }
@@ -433,7 +497,7 @@ a{
     flex-direction: row;
     justify-content: left;
     flex-wrap: nowrap;
-    font-size: 12pt;
+    font-size: 11.25pt;
     margin-top: 1px;
 }
 
@@ -651,7 +715,12 @@ a{
 
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 875px) {
+    #skillTotal{
+        position: static;
+        margin-left: 6px;
+        margin-top: 2px;
+    }
     #sheetbody{
         height: 512px;
         display: flex;
@@ -663,15 +732,15 @@ a{
     #title{
         display: inherit;
     }
-    #pageContainer{
-        margin-top: 4em;
-    }
     #sheetnotesWrapper{
         width: 100%;
     }
     #characterSheet{
         max-width: 832px;
         padding: 1em 1em 1em 1em;
+    }
+    #controls{
+        max-width: 864px;
     }
     #characterNameWrapper{
         width: 60%;
@@ -755,5 +824,8 @@ a{
         margin: -16px 0 0 0;
         padding-top: 20px;
         height: 60px;
+    }
+    #rollAttributesButton{
+        margin: 0 15px 0 15px;
     }
 }

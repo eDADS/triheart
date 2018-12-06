@@ -35,6 +35,7 @@ function roll(id, character) {
             break;
         case "vitality":
             character.vitality = attribute;
+            $('#maxHealth').html(20 + (attribute * 2));
             break;
         case "knowledge":
             character.knowledge = attribute;
@@ -113,6 +114,7 @@ function Character(name, level, className, strength, agility, vitality, knowledg
     this.characteristic3 = characteristic3;
     this.notes = notes;
     this.attributeSum = 0;
+    strengthToRoll = agilityToRoll = vitalityToRoll = knowledgeToRoll = instinctToRoll = charismaToRoll = false;
 }
 
 function updateSheet(character) {
@@ -176,12 +178,13 @@ function updateSheet(character) {
     $("#characteristic2").html(character.characteristic2);
     $("#characteristic3").html(character.characteristic3);
     $("#notes").html(character.notes);
-    (character.strength != "" ? $('#strengthOverlay0').addClass('hidden') : $('#strengthOverlay0').removeClass('hidden'));
-    (character.agility != "" ? $('#agilityOverlay1').addClass('hidden') : $('#agilityOverlay1').removeClass('hidden'));
-    (character.vitality != "" ? $('#vitalityOverlay2').addClass('hidden') : $('#vitalityOverlay2').removeClass('hidden'));
-    (character.knowledge != "" ? $('#knowledgeOverlay3').addClass('hidden') : $('#knowledgeOverlay3').removeClass('hidden'));
-    (character.instinct != "" ? $('#instinctOverlay4').addClass('hidden') : $('#instinctOverlay4').removeClass('hidden'));
-    (character.charisma != "" ? $('#charismaOverlay5').addClass('hidden') : $('#charismaOverlay5').removeClass('hidden'));
+    (!character.strengthToRoll ? $('#strengthOverlay0').addClass('hidden') : $('#strengthOverlay0').removeClass('hidden'));
+    (!character.agilityToRoll ? $('#agilityOverlay1').addClass('hidden') : $('#agilityOverlay1').removeClass('hidden'));
+    (!character.vitalityToRoll ? $('#vitalityOverlay2').addClass('hidden') : $('#vitalityOverlay2').removeClass('hidden'));
+    (!character.knowledgeToRoll ? $('#knowledgeOverlay3').addClass('hidden') : $('#knowledgeOverlay3').removeClass('hidden'));
+    (!character.instinctToRoll ? $('#instinctOverlay4').addClass('hidden') : $('#instinctOverlay4').removeClass('hidden'));
+    (!character.charismaToRoll ? $('#charismaOverlay5').addClass('hidden') : $('#charismaOverlay5').removeClass('hidden'));
+    updateSkillTotal(character);
 }
 
 function updateCharacter() {
@@ -227,9 +230,13 @@ function updateCharacter() {
     character.characteristic2 = $("#characteristic2").html();
     character.characteristic3 = $("#characteristic3").html();
     character.notes = $("#notes").html();
-
     characterArray[characterIndex] = character;
-    localStorage.setItem("cArray", JSON.stringify(characterArray));
+    localStorage.cArray = JSON.stringify(characterArray);
+}
+
+function updateSkillTotal(character) {
+    skillTotal = parseInt(character.climb) + parseInt(character.athletics) + parseInt(character.acrobatics) + parseInt(character.dexterity) + parseInt(character.stealth) + parseInt(character.medicine) + parseInt(character.alchemy) + parseInt(character.occult) + parseInt(character.nature) + parseInt(character.forgery) + parseInt(character.perception) + parseInt(character.investigation) + parseInt(character.hunting) + parseInt(character.animalhandling) + parseInt(character.persuasion) + parseInt(character.deception) + parseInt(character.athletics) + parseInt(character.entertainment) + parseInt(character.streetwise);
+    $('#skillTotal').html("Total: " + skillTotal);
 }
 
 function rollAttributes(character) {
@@ -239,18 +246,31 @@ function rollAttributes(character) {
 $('document').ready(function () {
     if (!localStorage.cArray) {
 
-        character = new Character("", "", "");
+        character = new Character("", "", "", "", "", "", "", "", "", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "Notes:<br><br><br><br><br><br><br><br><br><br>", 0, false, false, false, false, false, false);
 
         characterArray = [character];
         localStorage.setItem("cArray", JSON.stringify(characterArray));
+        localStorage.setItem("activeCharacter", JSON.stringify(0));
     }
 
     characterArray = JSON.parse(localStorage.getItem("cArray"));
-    updateSheet(characterArray[0]);
-    characterIndex = 0;
+    characterIndex = JSON.parse(localStorage.getItem("activeCharacter"));
+    updateSheet(characterArray[characterIndex]);
+
+    for (i = 0; i < characterArray.length; i++) {
+        $("#characterManager").append($("<option value=" + i + "></option>").text((characterArray[i].name ? characterArray[i].name : "Character " + (i + 1))));
+    }
+    $("#characterManager").append($("<option id='createNewCharacter' value='CREATE'></option>").text("Create new character"));
+    $("#characterManager").val(characterIndex);
 });
 
 function skillUpdate(skillName, clickedBall, skillValue) {
+    if (clickedBall == 0) {
+        $('#' + skillName + '1').removeClass("ballActive");
+        $('#' + skillName + '2').removeClass("ballActive");
+        $('#' + skillName + '3').removeClass("ballActive");
+        return clickedBall;
+    }
     if (clickedBall == 1) {
         if (1 == skillValue) {
             $('#' + skillName + '1').removeClass("ballActive");
@@ -291,17 +311,115 @@ function skillUpdate(skillName, clickedBall, skillValue) {
 }
 
 $(function () {
+    $('#name').on('input', function () {
+        character = characterArray[characterIndex];
+        updateCharacter();
+        characterArray = JSON.parse(localStorage.getItem("cArray"));
+        $("#characterManager").empty();
+        for (i = 0; i < characterArray.length; i++) {
+            $("#characterManager").append($("<option value=" + i + "></option>").text((characterArray[i].name ? characterArray[i].name : "Character " + (i + 1))));
+        }
+        $("#characterManager").append($("<option id='createNewCharacter' value='CREATE'></option>").text("Create new character"));
+    });
+
+    $('#characterManager').on('change', function () {
+        updateCharacter();
+        value = $(this).val();
+        if (value == "CREATE") {
+            character = new Character("", "", "", "", "", "", "", "", "", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "Notes:<br><br><br><br><br><br><br><br><br><br>", 0, false, false, false, false, false, false);
+            characterIndex = characterArray.push(character) - 1;
+            localStorage.setItem("cArray", JSON.stringify(characterArray));
+            $("#characterManager").empty();
+            for (i = 0; i < characterArray.length; i++) {
+                $("#characterManager").append($("<option value=" + i + "></option>").text((characterArray[i].name ? characterArray[i].name : "Character " + (i + 1))));
+            }
+            $("#characterManager").append($("<option id='createNewCharacter' value='CREATE'></option>").text("Create new character"));
+            $(this).val(characterIndex);
+            updateSheet(character);
+        } else {
+            characterIndex = value;
+            character = characterArray[characterIndex];
+            updateSheet(character);
+        }
+        localStorage.setItem("activeCharacter", JSON.stringify(characterIndex));
+    });
+
+    $('#createNewCharacter').on('click', function () {
+        $('#characterManager').val('')
+        character = new Character("", "", "");
+        characterArray = JSON.parse(localStorage.getItem("cArray"));
+        characterArray.append(character);
+        characterIndex = characterArray.length - 1;
+        updateSheet(characterArray[characterIndex]);
+        localStorage.setItem("activeCharacter", JSON.stringify(characterIndex));
+    });
+
     $('.attributeOverlay').on('click', function () {
         character = characterArray[characterIndex];
         id = ($(this).attr('id')).substr(($(this).attr('id')).length - 1);
         $(this).addClass("hidden");
-
         $('#' + attributeIndices[id]).html(roll(id, character));
+        switch (id) {
+            case "0":
+                character.strengthToRoll = false;
+                break;
+            case "1":
+                character.agilityToRoll = false;
+                break;
+            case "2":
+                character.vitalityToRoll = false;
+                break;
+            case "3":
+                character.knowledgeToRoll = false;
+                break;
+            case "4":
+                character.instinctToRoll = false;
+                break;
+            case "5":
+                character.charismaToRoll = false;
+                break;
+            default:
+                break;
+        }
+        updateCharacter();
+    });
+
+    $('#deleteCharacterButton').on('click', function () {
+        if (!confirm("Are you sure you want to DELETE this character permanently? This action cannot be undone.")) {
+            return;
+        } else {
+            if (characterArray.length <= 1) {
+                character = new Character("", "", "", "", "", "", "", "", "", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "Notes:<br><br><br><br><br><br><br><br><br><br>", 0, false, false, false, false, false, false);
+            } else {
+                alert(characterArray);
+                characterArray.splice(characterIndex, 1);
+                alert(characterArray);
+                characterIndex = (characterIndex > 1 ? characterIndex - 1 : characterIndex);
+                character = characterArray[characterIndex];
+            }
+        }
+
+        updateSheet(character);
+
+        characterArray[characterIndex] = character;
+        localStorage.setItem("cArray", JSON.stringify(characterArray));
+
+        $("#characterManager").empty();
+        for (i = 0; i < characterArray.length; i++) {
+            $("#characterManager").append($("<option value=" + i + "></option>").text((characterArray[i].name ? characterArray[i].name : "Character " + (i + 1))));
+        }
+        $("#characterManager").append($("<option id='createNewCharacter' value='CREATE'></option>").text("Create new character"));
+        $('#characterManager').val(characterIndex);
     });
 
     $('#rollAttributesButton').on('click', function () {
         character = characterArray[characterIndex];
         updateCharacter();
+        if (character.strength || character.agility || character.vitality || character.knowledge || character.instinct || character.charisma) {
+            if (!confirm("Are you sure you want to roll attributes? Your current attributes will be deleted.")) {
+                return;
+            }
+        }
         character.attributeSum = 0;
         character.strength = "";
         character.agility = "";
@@ -309,6 +427,7 @@ $(function () {
         character.knowledge = "";
         character.instinct = "";
         character.charisma = "";
+        character.strengthToRoll = character.agilityToRoll = character.vitalityToRoll = character.knowledgeToRoll = character.instinctToRoll = character.charismaToRoll = true;
         updateSheet(character);
         $('.attributeOverlay').removeClass("hidden");
     });
@@ -376,10 +495,12 @@ $(function () {
             default:
                 break;
         }
+        updateSkillTotal(character);
         updateCharacter();
     });
 });
 
 window.onbeforeunload = function () {
     updateCharacter();
+    localStorage.setItem("activeCharacter", JSON.stringify(parseInt(characterIndex)));
 }
