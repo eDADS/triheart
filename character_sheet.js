@@ -392,7 +392,7 @@ $(function () {
                 character = new Character("", "", "", "", "", "", "", "", "", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "Notes:<br><br><br><br><br><br><br><br><br><br>", 0, false, false, false, false, false, false);
             } else {
                 characterArray.splice(characterIndex, 1);
-                characterIndex = (characterIndex > 1 ? characterIndex - 1 : characterIndex);
+                characterIndex = (characterIndex > 0 ? characterIndex - 1 : characterIndex);
                 character = characterArray[characterIndex];
             }
         }

@@ -75,7 +75,7 @@ body{
     font-size: 1em;
 }
 
-textarea, select, input, button, p, div, select { outline-color: #4F7942; }
+textarea, select, input, button, p, div, select, option { outline-color: #4F7942 !important; }
 
 h1{
     letter-spacing: 2px;
@@ -196,6 +196,10 @@ a{
     width: 100%;
     flex-grow: 1;
     padding: 5px 3px 5px 3px;
+}
+
+#createNewCharacter{
+    font-style: italic;
 }
 
 select{
