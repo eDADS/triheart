@@ -340,7 +340,7 @@ a{
     color: var(--bodytext);
     width: 50%;
     flex-grow: 2;
-    margin-top: 1em;
+    margin-top: 1.5em;
     max-width: 60em;
 }
 
