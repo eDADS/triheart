@@ -4,6 +4,14 @@ if (JSON.parse(localStorage.getItem("darkMode")) == true) {
     makeLight();
 }
 
+function checkDark() {
+    if (JSON.parse(localStorage.getItem("darkMode")) == true) {
+        makeDark();
+    } else {
+        makeLight();
+    }
+}
+
 $(function () {
     if (JSON.parse(localStorage.getItem("darkMode")) == true) {
         makeDark();
@@ -41,7 +49,7 @@ $(function () {
     });
 
     $('#darkmodeButton').on('click', function () {
-        if (JSON.parse(localStorage.getItem("darkMode")) == false) {
+        if ($(this).html() == "Dark") {
             makeDark();
         } else {
             makeLight();

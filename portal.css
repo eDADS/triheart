@@ -94,7 +94,7 @@ a{
     background: var(--main);
     max-height: 3em;
     height: 3em;
-    padding: 0.1em 1.5em 0.1em 0.5em;
+    padding: 0em 1.5em 0.1em 0.5em;
 }
 
 #title{
@@ -131,6 +131,11 @@ a{
     text-align: center;
     cursor: pointer;
 }
+
+#portalButton:hover, #darkmodeButton:hover{
+    background-color: var(--maind);
+}
+
 #darkmodeButton{
     width: 4em;
 }
@@ -143,6 +148,13 @@ a{
     justify-content: center;
     overflow-y: scroll;
     overflow-x: hidden;
+}
+
+#logoWrapper{
+    width: 90%;
+    max-width: 650px;
+    margin-top: 20px;
+    margin-bottom: 8px;
 }
 
 .categoryContainer{
@@ -166,9 +178,9 @@ a{
 
 .link{
     position: relative;
-    text-align: left;
+    text-align: center;
+    width: 100%;
     font-size: 1.5em;
-    padding-left: 0.25em;
     color: var(--heading);
     overflow: hidden;
     white-space: nowrap;

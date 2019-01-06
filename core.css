@@ -8,7 +8,7 @@
     --text: #FFFFFF;
     --bodytext: black;
     --heading: rgb(70, 20, 3);
-    --subheading: rgb(70, 20, 3);
+    --subheading: #842A0E;
     --scrolltrack: #5D1600;
     --scrollthumb: #CB6E50;
     --tableshadow: rgba(25, 6, 0, 0.2);
@@ -65,6 +65,7 @@
 
 html {
     font-size: 100%;
+    overflow: hidden;
   }
 
 body{
@@ -76,16 +77,27 @@ body{
 h1{
     position: relative;
     text-align: center;
-    font-size: 3em;
-    color: var(--heading);
+    font-size: 1.4em;
+    padding: 0.1em 0.5em 0.1em 0.5em;
+    margin-bottom: 2px;
+    color: var(--main);
+    background-color: var(--main);
+    /*
     overflow: hidden;
     white-space: nowrap;
+    */
+}
+
+h1:hover{
+    background-color: var(--maind);
+    cursor: pointer;
 }
 
 h1 span{
     padding-right: 0.25em;
     padding-left: 0.25em;
-    background-color: var(--bg);
+    color: var(--text);
+    /*background-color: var(--bg);*/
 }
 
 h1:after {
@@ -94,13 +106,13 @@ h1:after {
 
 h2{
     margin-top: 0.25em;
-    font-size: 2em;
+    font-size: 2.5em;
     color: var(--subheading);
     text-align: center;
 }
 
 h3{
-    font-size: 1.25em;
+    font-size: 2em;
     color: var(--subheading);
 }
 
@@ -146,12 +158,16 @@ ul {
     background: var(--main);
     max-height: 3em;
     height: 3em;
-    padding: 0.1em 1.5em 0.1em 0.5em;
+    padding: 0em 1.5em 0.1em 0.5em;
 }
 
 #burgerContainer{
     padding: 0.75em;
     cursor: pointer;
+}
+
+#burgerContainer:hover{
+    background-color: var(--maind);
 }
 
 .bun{
@@ -199,6 +215,10 @@ a{
     text-decoration: none;
 }
 
+#portalButton:hover, #darkmodeButton:hover{
+    background-color: var(--maind);
+}
+
 #portalButtonText{
     color: var(--text);
 }
@@ -212,8 +232,8 @@ a{
 }
 
 #pageContainer{
-    margin-top: 3em;
-    height: calc(100vh - 3em);
+    margin-top: 2.5em;
+    height: calc(100vh - 2em);
     display: flex;
     justify-content: space-between;
     overflow-y: scroll;
@@ -251,7 +271,7 @@ a{
     display: block;
     visibility: hidden;
     position: relative;
-    top: -3em;
+    top: -2.75em;
 }
 
 /*#navigationWrapper{
@@ -270,15 +290,19 @@ a{
 }*/
 
 .nav1{
-    padding: 0.3em 0 0.2em 0.5em;
+    padding: 0.3em 0 0.3em 0.5em;
     background: var(--main);
     border-bottom: 1px solid var(--maindd);
     color: white;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 450;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.nav1:hover{
+    background: var(--maind);
 }
 
 .nav2{
@@ -289,9 +313,8 @@ a{
 
 .nav3{
     color: var(--text);
-    width: 80%;
+    width: 90%;
     background-color: var(--mainl);
-    padding: 0.3em 0 0.3em 0.5em;
     overflow: hidden;
     white-space: nowrap;
     overflow: hidden;
@@ -300,11 +323,17 @@ a{
     display: flex;
 }
 
+.nav3:hover{
+    background-color: var(--mainll);
+}
+
+
 .nav3 > a{
     color: var(--text);
     text-decoration: none;
     flex-grow: 1;
     height: 100%;
+    padding: 0.3em 0 0.3em 0.5em;
 }
 
 #contentContainer{
@@ -326,6 +355,38 @@ a{
     min-width: 100%;
 }
 
+#accordionControlButtonContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.accordionButton{
+    width: 50%;
+    background-color: var(--main);
+    margin-bottom: 0.25em;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    color: var(--text);
+    background-color: var(--main);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.accordionButton:hover{
+    background-color: var(--maind);
+}
+
+#collapseall{
+    margin-right: 0.16em;
+}
+
+#expandall{
+    margin-left: 0.16em;
+}
+
 strong{
     color: var(--subheading);
 }
@@ -339,6 +400,16 @@ td{
 }
 
 tr:nth-child(odd){background-color: var(--tableshadow);}
+
+.hyperlink{
+    color: var(--subheading);
+    font-weight: 550;
+    text-decoration: underline;
+}
+
+.hyperlink:hover{
+    text-shadow: 0px 0px 1px var(--subheading);
+}
 
 .blockImage{
     margin: 0.5em 0 0.5em 0;
@@ -434,6 +505,9 @@ tr:nth-child(odd){background-color: var(--tableshadow);}
 }
 
 @media only screen and (min-width: 650px) {
+    .accordionButton{
+        max-width: 200px;
+    }
     #navigationWrapper{
         width: 14em;
     }

@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" type="text/css" href="character_sheet.css">
+    <link rel="icon" href="charactersheetfavicon.png">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
@@ -52,21 +54,21 @@
                     </div>
                 </div>
 
-
+                <!--
                 <div id="characterLevelWrapper">
                     <div id="characterLevel">
                         <div id="characterLevelLabel">LEVEL</div>
                         <input type="text" class="tbtextBox" id="level">
                     </div>
                 </div>
-
+                -->
+                
                 <div id="characterClassWrapper">
                     <div id="characterClass">
                         <div id="characterClassLabel">CLASS</div>
                         <input type="text" class="tbtextBox" id="className">
                     </div>
                 </div>
-
             </div>
 
             <div id="sheetbodyWrapper">
@@ -256,7 +258,9 @@
                                         <div contenteditable="true" id="instinct"></div>
                                     </div>
                                 </div>
+                                
                                 <div class="skills">
+                                    <!--
                                     <div class="skill">
                                         <div class="skillBalls">
                                             <div id="perception1" class="skillBall"></div>
@@ -265,6 +269,7 @@
                                         </div>
                                         <div class="skillname">PERCEPTION</div>
                                     </div>
+                                    -->
                                     <div class="skill">
                                         <div class="skillBalls">
                                             <div id="investigation1" class="skillBall"></div>
@@ -435,7 +440,7 @@
                             </div>
 
                             <div class="rpBox">
-                                <div class="rpLegend">PASSION (PERSONAL VALUES)</div>
+                                <div class="rpLegend">PERSONAL VALUES</div>
                                 <p contenteditable="true" id="personalValue1"></p>
                                 <p contenteditable="true" id="personalValue2"></p>
                                 <p contenteditable="true" id="personalValue3"></p>
@@ -445,7 +450,7 @@
                             </div>
 
                             <div class="rpBox">
-                                <div class="rpLegend">JUDGEMENT (UNIVERSAL VALUES)</div>
+                                <div class="rpLegend">UNIVERSAL VALUES</div>
                                 <p contenteditable="true" id="universalValue1"></p>
                                 <p contenteditable="true" id="universalValue2"></p>
                                 <p contenteditable="true" id="universalValue3"></p>

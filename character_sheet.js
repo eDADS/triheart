@@ -235,7 +235,7 @@ function updateCharacter() {
 }
 
 function updateSkillTotal(character) {
-    skillTotal = parseInt(character.climb) + parseInt(character.athletics) + parseInt(character.acrobatics) + parseInt(character.dexterity) + parseInt(character.stealth) + parseInt(character.medicine) + parseInt(character.alchemy) + parseInt(character.occult) + parseInt(character.nature) + parseInt(character.forgery) + parseInt(character.perception) + parseInt(character.investigation) + parseInt(character.hunting) + parseInt(character.animalhandling) + parseInt(character.persuasion) + parseInt(character.deception) + parseInt(character.athletics) + parseInt(character.entertainment) + parseInt(character.streetwise);
+    skillTotal = parseInt(character.climb) + parseInt(character.athletics) + parseInt(character.acrobatics) + parseInt(character.dexterity) + parseInt(character.stealth) + parseInt(character.medicine) + parseInt(character.alchemy) + parseInt(character.occult) + parseInt(character.nature) + parseInt(character.forgery) + parseInt(character.perception) + parseInt(character.investigation) + parseInt(character.hunting) + parseInt(character.animalhandling) + parseInt(character.persuasion) + parseInt(character.deception) + parseInt(character.intimidation) + parseInt(character.entertainment) + parseInt(character.streetwise);
     $('#skillTotal').html("Total: " + skillTotal);
 }
 
