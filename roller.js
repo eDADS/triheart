@@ -28,4 +28,14 @@ $(function () {
     $('#rolld20 > .dieImage').on('click', function () {
         roll(20);
     });
+
+    $(window).resize(function(){
+        maxHistory = Math.ceil(($('#headerContainer').width() - 250) / 100);
+        $('#d4 div:gt(' + (maxHistory + 1) + ')').remove();
+        $('#d6 div:gt(' + (maxHistory + 1) + ')').remove();
+        $('#d8 div:gt(' + (maxHistory + 1) + ')').remove();
+        $('#d10 div:gt(' + (maxHistory + 1) + ')').remove();
+        $('#d12 div:gt(' + (maxHistory + 1) + ')').remove();
+        $('#d20 div:gt(' + (maxHistory + 1) + ')').remove();
+      });
 });
