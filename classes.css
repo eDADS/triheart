@@ -1,0 +1,74 @@
+:root{
+    --mainll: #ABA2F3;
+    --mainl: #8278E4;
+    --main: #635AB9;
+    --maind: #5347CE;
+    --maindd: #2715DB;
+    --bg: #FFDED3;
+    --text: #FFFFFF;
+    --bodytext: black;
+    --subheading: #5347CE;
+    --scrolltrack: #635AB9;
+    --scrollthumb: #5347CE;
+}
+
+
+.darkmode{
+    --mainll: #4C4C59;
+    --mainl: #393b42;
+    --main: #18181B;
+    --maind: #0F0F0F;
+    --maindd: #040404;
+    --bg: #26272A;
+    --text: #FFFFFF;
+    --bodytext: #D8D8D8;
+    --heading: #D8D8D8;
+    --subheading: #D8D8D8;
+    --scrolltrack: #040404;
+    --scrollthumb: #7F7E7E;
+    --tableshadow: rgba(255, 255, 255, 0.15);
+}
+
+.classTier{
+    font-size: 36pt;
+    margin-top: 0.4em;
+    margin-bottom: 0.1em;
+    padding-left: 0.25em;
+    color: var(--text);
+    font-weight: bold;
+    background-color: var(--main);
+}
+
+.abilityname{
+    font-size: 18pt;
+    margin-top: 0.5em;
+}
+
+
+h3:not(.nav1) {
+    position: relative;
+    border-bottom: 1px solid var(--subheading); 
+    line-height: 0.1em;
+    margin: 0.75em 0 15px; 
+}
+
+h3:not(.nav1) em{
+    padding-right: 0.25em;
+    background-color: var(--bg);
+}
+
+h3:not(.nav1):after {
+    content: none;
+}
+
+.printlink{
+    padding: 7px 0 10px 0!important;
+    font-size: 16pt;
+    color: var(--subheading);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.printlink:hover{
+    font-style: italic;
+}
